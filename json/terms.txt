@@ -1,0 +1,395 @@
+Last Update: December 17, 2021
+
+NORSU TERMS OF USE
+The following Terms of Use (“Terms”) govern your use (the term “use” will mean access or
+use, as applicable) to our browser extension Norsu allowing you to make easy
+interactions with third party websites and applications accepting TAC blockchain
+compatible crypto-payments with digital wallets of the TAC blockchain, and enabling
+ordinary websites and applications to interact with the TAC blockchain, while keeping the
+user in control over the transactions they approve. Norsu and any other related
+features, tools, materials,or services offered are referred to the “Services”. Please read these
+Terms of Use carefully before using the Keeper.
+
+These Terms of Use govern your usage of Norsu software provided by Chainfrog Oy 
+(Y-tunnus: 2788082-9) (“Company”,“us”, “we”). The term “you” or “User” refers to the 
+person or entity browsing or otherwise Using the Norsu or receiving any Services. A copy of
+these Terms of Use may be downloaded, saved, and printed for your reference.
+
+BY ACCESSING AND USING THE SERVICES, YOU ACCEPT AND AGREE TO BE BOUND BY
+AND COMPLY WITH THESE TERMS OF USE. IF YOU DO NOT ACCEPT AND AGREE TO BE
+BOUND BY THESE TERMS OF USE, PLEASE DO NOT ACCESS OR USE NORSU.
+
+THE COMPANY BELIEVES THAT THE INFORMATION PRESENTED IS ACCURATE AND
+THAT THE INFORMATION WAS OBTAINED FROM SOURCES THAT THE COMPANY
+BELIEVES TO BE RELIABLE. HOWEVER, THE COMPANY DOES NOT GUARANTEE THE
+ACCURACY OR COMPLETENESS OF THE INFORMATION. SUCH INFORMATION IS
+SUBJECT TO CHANGE WITHOUT NOTICE.
+
+DECISIONS TO USE, HOLD, TRANSFER OR MAKE ANY TRANSACTIONS WITH
+CRYPTOCURRENCIES AND OTHER CRYPTO-ASSETS INVOLVE RISK AND ARE BEST
+MADE BASED ON THE ADVICE OF QUALIFIED PROFESSIONALS. ANY DEALING WITH
+CRYPTOCURRENCIES AND OTHER CRYPTO-ASSETS INVOLVES A RISK OF
+SUBSTANTIAL LOSSES. BEFORE UNDERTAKING ANY ACTION AND USING NORSU,
+YOU SHOULD CONSULT A QUALIFIED PROFESSIONAL. PLEASE CONSIDER
+CAREFULLY WHETHER SUCH DEALING WITH CRYPTO-ASSETS IS SUITABLE FOR YOU
+IN LIGHT OF YOUR FINANCIAL CONDITION AND ABILITY TO BEAR FINANCIAL RISKS.
+
+UNDER NO CIRCUMSTANCES SHALL WE BE LIABLE FOR ANY LOSS OR DAMAGE YOU
+OR ANYONE ELSE INCURS AS A RESULT OF ANY CRYPTO-TRANSFER AND/OR ANY
+OTHER TRANSACTION THAT YOU OR ANYONE ELSE ENGAGES IN.
+
+1. NORSU
+Norsu browser extension is a software application extending the functionality of
+web browsers in order to enable users to make easy interactions with third party websites
+and applications accepting TAC blockchain compatible crypto-payments with User
+wallets, and websites and applications to interact with the TAC blockchain through the
+Norsu API, while the user keeps his/her SEED safe and is able to approve
+transactions without entering private SEED on third-parties web resources and
+applications.
+
+To use Norsu you have to have and provide SEED phrase of a TAC blockchain wallet
+owned by you exclusively and under your sole and full control (“User Wallet”).
+Using Norsu, you are solely responsible for keeping your SEED. We will encrypt
+your SEED with a password you provide to Norsu. We do not store your SEED
+or your Norsu password and never send them to our servers. This secret information
+is stored locally on your device.
+
+When you visit third party websites and applications accepting TAC blockchain
+compatible crypto payments with a browser with installed and running a Norsu
+browser extension with connected User Wallet, our application allows:
+
+• YOU to make the TAC blockchain compatible crypto payments to such third-party
+services and websites from your connected User Wallet without sharing your SEED
+and passwords related to such User Wallet with such websites and service;
+
+• THIRD PARTY SERVICES AND WEBSITES to request your User Wallet balance and/or
+TAC blockchain compatible crypto payments through Norsu when you
+are interacting with such third-party websites and services.
+
+Norsu never initiates an/or makes decision to make a transaction from your
+User Wallet to any third-party websites, applications or services itself. Norsu may
+show your User Wallet balance and/or facilitate transactions from or to your User Wallet
+only with your prior approval. You agree and understand that you are always responsible
+for your own conduct, acts and omissions. The Company is not liable for any losses that
+Users may suffer due to their decisions to show their User Wallet balance, make
+transactions, or make other actions (or inactions) through or with the help of Norsu.
+
+Users are to acknowledge that neither the Company nor any person or legal entity
+affiliated with the Company are involved in the transactions or actions made using the
+Norsu.
+
+2. MODIFICATION OF TERMS OF USE
+The most current version of the Terms of Use will be provided at:
+
+https://raw.githubusercontent.com/tactokens/norsu/main/terms.txt
+
+Any updates of these Terms will be effective no sooner than the day they are publicly posted.
+If you do not want to agree to any changes made to the Terms of Use, you should stop using
+Norsu, because by continuing to use Norsu you indicate your
+agreement to be bound by the updated terms.
+
+The Company may from time to time set up and/or change the Terms. The Company reserves
+the right at any time and in its sole discretion to suspendand/or cancel provision of the
+Services for any users for their violation of the present Terms and/or otherwise at the
+Company’s own discretion. The Company may terminate provision of Services in part or in
+full at any time.
+
+3. ELIGIBILITY
+You hereby represent and warrant that you are fully able and competent to enter the terms,
+conditions, obligations, affirmations, representations, and warranties set forth in these
+Terms and to abide by and comply with these Terms.
+By using the Services, you confirm that:
+
+− you are at least 18 (eighteen) years old;
+− you are of legal age to accept these Terms according to your residence country
+legislation;
+− you comply with the laws and regulations of your country of residence;
+− you have a full capacity and authority to enter these Terms;
+− you have a valid User Wallet or will create a User Wallet for using Norsu.
+
+You agree and understand that you are always responsible for your own conduct, acts and
+omissions.
+
+You agree to indemnify and hold harmless the Company and any of its affiliated persons
+against all suits, claims, costs, losses, damages or demands (including property loss, tax
+claims, infringements of intellectual or personal rights) in case of your non-compliance with
+these Terms.
+
+4. USER WARRANTIES AND REPRESENTATIONS
+By entering these Terms and Conditions you shall warrant and represent that:
+
+− you have full capacity to contract under applicable law;
+− you have all rights to the User Wallet you are making any actions or transactions with;
+− you will only be transacting via the Services with legally obtained funds that belong
+to you;
+− you will not be performing, undertaking, engaging in, aiding, or abetting any unlawful
+activity through your relationship with us or through your use of the Services;
+− you will not use the Services for illegal purposes, including money laundering of
+criminal proceeds, transfer or receipt of payment for planning, preparation or
+commitment of crime,for financing the terrorism and illegal trade;
+− you will not use the Services for any purpose prohibited by these Terms or in any
+mannerthat could damage, disable, overburden, or impair the Company.
+
+5. ACCOUNT PASSWORD AND SECURITY
+When setting up an account within Company, you will be responsible for keeping your own
+account secret seed phrases for the access of any of your User Wallets and a separate
+password for Norsu which you choose and set up. Company encrypts this
+information locally at your computer with a Norsu password you provide, we never
+send any of yoursecret information (including Seed phrase and Norsu password) to
+our servers.
+
+You agree to (a) never use the same password for Norsu that you have ever used
+outside of this Services and (b) keep your secret information and password confidential and
+do not share themwith anyone else. Company cannot and will not be liable for any loss or
+damage arising from breaches of security and confidentiality because of your fault.
+
+6. RISKS
+Third Party Services and Websites.
+You acknowledge and agree that the Company is not
+responsible for the third-party services, applications, and website you use and interact with
+the help of Norsu, and that you shall access the trustworthiness of any third-party
+websites, products, smart-contracts, or content you access or use through Norsu
+independently. You further expressly acknowledge that third party websites and services
+can be maliciously or negligently harmful, causing mistakes and/or failures of the Norsu
+operation and that the Company cannot be held liable for your interaction with such 
+third party websites and services and related loss of property or even identity.
+Risk of Blockchain Technology Usage. You understand that blockchain technologies
+including the TAC blockchain technology and other associated and related technologies
+are new and untestedand outside of your or the Company’s control and adverse changes in
+market forces or the technology, broadly construed, will excuse the nonperformance by the
+Company under these Terms including temporary interruption or permanent termination of
+your access to Services,forks, rollbacks or bugs causing loss of your crypto assets. By utilizing
+the Services in any way, you represent that you understand the inherent risks associated
+with blockchain systems; and warrant that you understand the usage and intricacies of
+blockchain-based softwaresystems and crypto-assets.
+
+Risk of Software Weaknesses.
+You understand and accept that there is no warranty that
+the Services will be uninterrupted or error-free. It may contain weaknesses and
+vulnerabilities. If you find out any breach of security, you must notify us.
+Risk of Theft or Unauthorized Access. You understand and accept that Norsu
+(i.e. the TAC, Bitcoin and Ethereum blockchains, etc.) may be exposed to attacks by hackers
+or other individuals that could result in theft or loss of the your crypto-assets.
+Internet transmission and failures in functionality. You acknowledge that there are risks
+associated with utilizing Norsu including, but not limited to, the failure of
+hardware, software, and Internet connections. You acknowledge that the Company shall not
+be responsible for any communication failures, disruptions, errors, distortions or delays you
+may experience whentrading via Norsu, however caused. You acknowledge that
+there are risks inherent in Internet connectivity and technologies that could result in the loss
+of your privacy, a confidential information and property.
+
+Unfavorable regulatory environment.
+Cryptocurrencies and blockchain technologies have
+been thesubject of scrutiny by various regulatory bodies around the world. The functioning
+and maintenance of the Services could be impacted by one or more regulatory inquiries or
+actions, including but not limited to restrictions of use of crypto assets. If so, the using of the
+Services may become illegal in some jurisdictions. It is your responsibility to be compliant
+with the applicable laws.
+
+7. INDEMNITY
+You agree to release and to indemnify, defend and hold harmless the Company and its
+parents, subsidiaries, affiliates and agencies, as well as the officers, directors, employees,
+shareholders andrepresentatives of any of the foregoing entities, from and against any and 
+6
+all losses, liabilities, expenses, damages, costs (including attorneys’ fees and court costs)
+claims or actions of any kindwhatsoever arising or resulting from your use of the Services,
+your violation of these Terms of Use, and any of your acts or omissions that implicate
+publicity rights, defamation or invasion of privacy. The Company reserves the right, at its
+own expense, to assume exclusive defense and control of any matter otherwise subject to
+indemnification by you and, in such case, you agree to cooperate with the Company in the
+defense of such matter.
+
+8. LIMITATION ON LIABILITY
+YOU ACKNOWLEDGE AND AGREE THAT YOU ASSUME FULL RESPONSIBILITY FORYOUR
+USE OF THE SERVICES. YOU ACKNOWLEDGE AND AGREE THAT ANY INFORMATION YOU
+SEND OR RECEIVE DURING YOUR USE OF THE SERVICES MAYNOT BE SECURE AND MAY BE
+INTERCEPTED OR LATER ACQUIRED BY UNAUTHORIZED PARTIES. YOU ACKNOWLEDGE
+AND AGREE THAT YOUR USE OF THE SERVICES IS AT YOUR OWN RISK. RECOGNIZING
+SUCH, YOU UNDERSTAND AND AGREE THAT, TO THE FULLEST EXTENT PERMITTED BY
+APPLICABLE LAW, NEITHER COMPANY NOR ITS AFFILIATED PERSONS OR
+REPRESENTATIVES WILL BE LIABLE TO YOU FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, CONSEQUENTIAL, PUNITIVE, EXEMPLARY OR OTHER DAMAGES OF ANY KIND,
+INCLUDING WITHOUT LIMITATION DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE,
+DATA OR OTHER TANGIBLE OR INTANGIBLE LOSSES OR ANY OTHER DAMAGES BASED ON
+CONTRACT, TORT, STRICT LIABILITY OR ANY OTHER GROUND (EVEN IF COMPANY HAD
+BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES), RESULTING FROM THE SERVICE;
+THE USE OR THE INABILITY TO USE SERVICE; UNAUTHORIZED ACCESS TO OR
+ALTERATION OF YOUR TRANSMISSIONSOR DATA; STATEMENTS OR CONDUCT OF ANY
+THIRD PARTY ON THE SERVICE; ANY ACTIONS WE TAKE OR FAIL TO TAKE AS A RESULT
+OF COMMUNICATIONS YOU SEND TO US; HUMAN ERRORS; TECHNICAL MALFUNCTIONS;
+FAILURES, INCLUDING PUBLIC UTILITY OR INTERNET OUTAGES; OMISSIONS,
+INTERRUPTIONS, LATENCY, DELETIONS OR DEFECTS OF ANY DEVICE OR NETWORK,
+PROVIDERS, OR SOFTWARE; ANY INJURY OR DAMAGE TO COMPUTER EQUIPMENT;
+INABILITY TO FULLY ACCESS THE SERVICES OR USE THE SERVICES AT ANY WEBSITE;
+THEFT, TAMPERING, DESTRUCTION, OR UNAUTHORIZED ACCESS TO, IMAGES OR OTHER
+CONTENT OF ANY KIND; DATA THAT IS PROCESSED LATE OR INCORRECTLY OR IS
+INCOMPLETE OR LOST; TYPOGRAPHICAL, PRINTING OR OTHER ERRORS, OR ANY
+COMBINATION THEREOF; OR ANY OTHER MATTER RELATING TO THE SERVICES.
+
+The Company shall not have any liability or responsibility for any errors or omissions in
+performance of theServices, for your action or inaction in connection with the Services or for
+any damage to your computer or data or funds or any other damage you may incur in
+connection withtheServices. Your use of theServices is at your own risk. In no event shall the
+Company be liablefor any direct, indirect, punitive, incidental, special or consequential
+damages arising out of or in any way connected with the use of the Services, the delay or
+inability to use the Services or otherwise arising in connection with the Services whether
+based on contract, tort, strict liability or otherwise, even if advised of the possibility of any
+such damages.
+
+You expressly understand and agree that your use of the Services is at your sole risk. The
+Servicesis provided on an “AS IS” and “as available” basis, without warranties of any kind,
+either express or implied, including, without limitation, implied warranties of
+merchantability, fitness for a particular purpose or non-infringement. You acknowledge that
+the Company has no control over, andno duty to take any action regarding: which users gain
+access to or use the Service; which third party websites and services you use the Services
+with; how you may use the Service; or what actions youmay takewith the help oftheServices.
+You release the Company from all liability for youhaving acquired or not acquired content
+through the Services.
+
+You acknowledge that the Company is not responsible for transferring, safeguarding, or
+maintaining your private keys, Norsu password or any digital currency
+associated therewith. If you lose, mishandle or have stolen your Norsu password or
+private keys, you acknowledge that you may not be able to recover digital currency accessible
+via such private keys and passwords, and that Company is not responsible for such loss. You
+acknowledge that the Company is not responsible for any loss, damage or liability arising
+from your failure to comply with the Terms hereunder.
+
+9. INTELLECTUAL PROPERTY
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and 
+associated documentation files (the "Software"), to deal in the Software without restriction, including 
+without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell 
+copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to 
+the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions 
+of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT 
+LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN 
+NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+The Norsu software is derived from the Waves Keeper software, which is licend under the MIT license.
+The Waves Keeper license is hereby included:
+
+-- start inclusion --
+MIT License
+
+Copyright (c) 2020 Inal Kardanov
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+documentation files (the "Software"), to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software,
+and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions 
+of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+-- end inclusion --
+
+You have no right to use any Norsu trademarks, Services marks, trade names, logos, domain names, 
+and any other features whether for commercial or noncommercial use.
+Third party software (for example, open-source software) included in Norsu are
+made available to you under the relevant third-party software’s license terms.
+
+10. PROHIBITED ACTIVITIES
+You agree that you will not use the Services to perform any type or sort of illegal activity or
+to take any action that negatively affects the performances of the Services. You may not
+engage viathe Services of the following activities, nor help a third party in any such activity
+to:
+
+• attempt to gain unauthorized access to our Services or another user’s orders or
+wallets;
+• make any attempt to bypass or circumvent any security features;
+• violate any law, statute, ordinance, regulation or these Terms;
+• reproduce, duplicate, copy, sell or resell our Services for any purpose except as
+authorizedin these Terms;
+• engage in any activity that is abusive or interferes with or disrupts our Services
+(forexample, DDoS attacks).
+
+11. COMMUNICATIONS AND WRITTEN NOTICES
+Unless the contrary is specifically provided in theseTerms, any notice, instruction, request, or
+other communication to be given to us by the User under these Terms shall be in writing and
+shall be sent to the email address below:
+
+12. COMPLAINTS AND DISPUTES
+If an alleged breach, controversy, claim, dispute or difference (a “Dispute”) arises between
+you and us out of or in connection with your use of the Services and/or these Terms
+(including but not limited to the validity, performance, breach or termination thereof), the
+partiesshall seek to resolve the matter by negotiation by referring the matter first to:
+If you wish to report an error or a Dispute, you must send an email to Norsu
+at: keir@chainfrog.com
+
+The following information will need to be included:
+• your name and surname;
+• your e-mail address (or other recognition details);
+• a detailed enquiry description;
+• the date and time that the issue have arisen.
+
+Additionally, you must inform us about any error in the Services within 24 hours from
+the occurance of the error.
+
+If a situation arises which is not expressly covered by these Terms, the parties agree
+to tryto resolve the matter on the basis of good faith and fairness and by taking such
+action as isconsistent with market practice.
+
+13. DISPUTE RESOLUTION, PLACE OF JURISDICTION AND GOVERNING LAW
+These Terms shall exclusively be governed by and construed in accordance with the
+substantive laws of Finland, as amended from time to time.
+
+In the event that the parties are unable to resolve a Dispute,
+then thep arties hereby irrevocably submit such Dispute to the exclusive jurisdiction of the
+courts of the Finland.
+
+14. FORCE MAJEURE
+A Force Majeure Event includes without limitation each of the following:
+
+• Government actions, the outbreak of war or hostilities, the threat of war, acts of
+terrorism, national emergency, riot, civil disturbance, sabotage, requisition, or
+any other international calamity, economic or political crisis;
+• Act of God, earthquake, tsunami, hurricane, typhoon, accident, storm, flood, fire,
+epidemic or other natural disaster;
+• Labour disputes and lock-out;
+• Breakdown, failure or malfunction of any electronic, network and communication
+lines (not due to our fault);
+• Any event, act or circumstances not reasonably within our control and the effect
+of that event(s) is such that Norsu support is not in a position to take any
+reasonable action to cure the default.
+
+15. THIRD-PARTY WEBSITES AND CONTENT
+The Services may be used to enable your interaction with websites, applications or services
+ownedor operated by parties other than the Company. The Company does not monitor or
+control resources outside the Services and is not responsible for their content, actions, or 
+inactions. The Company does not control the third-party content, actions, customer support
+or lack thereof or monitor it for compliance with any requirement(e.g.truthfulness, integrity,
+legality). Accordingly,the Company does not bear any liability arisen in connection with your
+access or use of the third-party websites, applications, and services. The inclusion of links to
+third party resources does notimply any endorsement of the material in the Services or,
+unless expressly disclosed otherwise, any sponsorship, affiliation or association with its
+owner, operator or sponsor, nor does such inclusion of links imply that the Company is
+authorized to use any trade name, trademark, logo, legal or official seal, or copyrighted
+symbol that may be reflected in the linked website.
+
+16. GENERAL INFORMATION
+Entire Agreement/assignment
+These Terms (and any additional terms, rules and conditions of participation that Company
+may post with respect to the provision of the Services) constitute the entire agreement
+between you and Company with respect to the Services and supersedes any prior
+agreements, oral or written, between you and Company. In the event of a conflict between
+these Terms and the additional terms, rules and conditions of participation, the latter will
+prevail over the Terms to the extent of the conflict. We may assign these Terms to our parent
+company, affiliate, or subsidiary, or in connection with a merger, consolidation, or sale or
+other disposition of all or substantially its assets.
+
+Waiver and Severability of Terms
+The failure of Company to exercise or enforce any right or provision of the Terms shall not
+constitute a waiver of such right or provision. If any provision of the Terms is found by an
+arbitrator or court of competent jurisdiction to be invalid, the parties nevertheless agree that
+the arbitrator or court should endeavor to give effect to the parties’ intentions as reflected
+in the provision, and the other provisions of the Terms remain in full force and effect.

@@ -1,0 +1,15 @@
+{
+  "include": ["src/**/*", "test/**/*"],
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./src",
+    "jsx": "react",
+    "lib": ["esnext", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noErrorTruncation": true,
+    "pretty": true,
+    "sourceMap": true,
+    "target": "es6"
+  }
+}

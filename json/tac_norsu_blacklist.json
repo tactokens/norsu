@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  
+  "whitelist": [
+    "explorer.tactoken.io"
+  ],
+  "blacklist": [
+    "binance-promo.net"
+  ],
+  "messages_config": {
+    "message_expiration_ms": 1800000,
+    "update_messages_ms": 30000,
+    "max_messages": 100
+  },
+  "pack_config": {
+    "max": 7,
+    "allow_tx": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  },
+  "network_config": {
+        "testnet": {
+            "code": "T",
+            "server": "https://nodes-testnet.tactoken.io/",
+            "matcher": "https://explorer-testnet.tactoken.io/"
+        },
+        "mainnet": {
+            "code": "%",
+            "server": "https://nodes.tactoken.io/",
+            "matcher": "https://explorer.tactoken.io/"
+        },
+        "stagenet": {
+            "code": "S",
+            "server": " https://nodes-stagenet.tactoken.io/",
+            "matcher": "https://explorer-stagenet.tactoken.io/"
+        },
+        "custom": {
+            "code": "",
+            "server": "",
+            "matcher": ""
+        }
+    }
+}

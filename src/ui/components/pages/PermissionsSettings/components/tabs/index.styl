@@ -1,0 +1,34 @@
+@import '../../../../../styles/colors.styl';
+
+.tabs
+  position: relative;
+  margin: 20px 10px;
+  display: flex;
+  justify-content: space-around;
+
+.tab
+  display: inline-flex;
+  position: relative;
+  cursor: pointer;
+
+  span
+    color: $basic500;
+    border-bottom: 1px dotted $basic500;
+
+.tab:before
+  position: relative;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  content: ' ';
+  margin-right: 8px;
+  background: url(../../../../../assets/img/check-14-basic-200.svg) center no-repeat;
+
+.selected
+  cursor: default;
+  span
+    color: $black;
+    border-bottom: 1px dotted $black;
+
+  &:before
+    background: url(../../../../../assets/img/check-14-success-400.svg) center no-repeat;

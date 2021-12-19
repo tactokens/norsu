@@ -1,7 +1,7 @@
 import { DEFAULT_FEE_CONFIG, DEFAULT_FEE_CONFIG_URL } from '../constants';
-import { SIGN_TYPE } from '@waves/signature-adapter';
-import { libs } from '@waves/waves-transactions';
-import { BigNumber } from '@waves/bignumber';
+import { SIGN_TYPE } from '@tac/signature-adapter';
+import { libs } from '@tac/tac-transactions';
+import { BigNumber } from '@tac/bignumber';
 
 const CONFIG_EXPIRATION_TIME = 60 * 60 * 1000;
 

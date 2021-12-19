@@ -294,7 +294,7 @@ describe('Password management', () => {
       await CreateNewAccount.importAccount.call(
         this,
         'rich',
-        'waves private node seed with waves tokens'
+        'tac private node seed with tac tokens'
       );
     });
 

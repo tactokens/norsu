@@ -1,6 +1,6 @@
 import ObservableStore from 'obs-store';
 
-const WAVES = {
+const TAC = {
   quantity: '10000000000000000',
   ticker: 'TAC',
   id: 'TAC',
@@ -19,16 +19,16 @@ export class AssetInfoController {
     const defaults = {
       assets: {
         mainnet: {
-          WAVES,
+          TAC,
         },
         stagenet: {
-          WAVES,
+          TAC,
         },
         testnet: {
-          WAVES,
+          TAC,
         },
         custom: {
-          WAVES,
+          TAC,
         },
       },
     };
@@ -39,14 +39,14 @@ export class AssetInfoController {
     );
   }
 
-  getWavesAsset() {
-    return WAVES;
+  getTacAsset() {
+    return TAC;
   }
 
   async assetInfo(assetId, compareFields = {}) {
     const { assets } = this.store.getState();
-    if (assetId === '' || assetId == null || assetId.toUpperCase() === 'WAVES')
-      return WAVES;
+    if (assetId === '' || assetId == null || assetId.toUpperCase() === 'TAC')
+      return TAC;
 
     const network = this.getNetwork();
     const API_BASE = this.getNode();

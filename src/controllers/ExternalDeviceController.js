@@ -1,4 +1,4 @@
-import { getAdapterByType } from '@waves/signature-adapter';
+import { getAdapterByType } from '@tac/signature-adapter';
 
 export class ExternalDeviceController {
   static async getUserList(adapterType, from, to) {

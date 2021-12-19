@@ -13,12 +13,12 @@ import {
   setShowNotification,
 } from '../../actions';
 import { PAGES } from '../../pageConfig';
-import { Money } from '@waves/data-entities';
+import { Money } from '@tac/data-entities';
 import { Intro } from './Intro';
 import { FinalTransaction, getConfigByTransaction } from '../transactions';
 import { BalanceAssets } from '../transactions/BaseTransaction';
 import { DEFAULT_FEE_CONFIG } from '../../../constants';
-import { TRANSACTION_TYPE } from '@waves/ts-types';
+import { TRANSACTION_TYPE } from '@tac/ts-types';
 
 class MessagesComponent extends React.Component {
   readonly state = {} as any;
@@ -36,14 +36,14 @@ class MessagesComponent extends React.Component {
     } = props;
     let loading = true;
 
-    if (!assets || !assets['WAVES'] || !balance) {
-      props.getAsset('WAVES');
+    if (!assets || !assets['TAC'] || !balance) {
+      props.getAsset('TAC');
       return { loading: true, selectedAccount };
     }
 
     const sponsoredBalance: BalanceAssets = Object.fromEntries(
       Object.entries({
-        WAVES: {
+        TAC: {
           balance: balance.available,
           minSponsoredAssetFee:
             DEFAULT_FEE_CONFIG.calculate_fee_rules.default.fee,
@@ -139,15 +139,15 @@ class MessagesComponent extends React.Component {
       }
 
       if ('priceAsset' in currentData) {
-        assets[currentData.priceAsset || 'WAVES'] = true;
+        assets[currentData.priceAsset || 'TAC'] = true;
       }
 
       if ('amountAsset' in currentData) {
-        assets[currentData.amountAsset || 'WAVES'] = true;
+        assets[currentData.amountAsset || 'TAC'] = true;
       }
 
       if ('assetId' in currentData) {
-        assets[currentData.assetId || 'WAVES'] = true;
+        assets[currentData.assetId || 'TAC'] = true;
 
         if ('tokens' in currentData) {
           moneys.push({ ...currentData, path: currentPath });

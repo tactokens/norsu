@@ -45,14 +45,14 @@ On browser pages that operate with https or http, with the Norsu extension insta
 
 All methods, except for "on" operate asynchronously and return [promises](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-In code, you can use [TypeScript types](https://github.com/wavesplatform/waveskeeper-types)
+In code, you can use [TypeScript types](https://github.com/tacplatform/tackeeper-types)
 
-On initialize `window.WavesKeeper` has not api methods.
-You can use `WavesKeeper.initialPromise` for waiting end initializing api.
+On initialize `window.Norsu` has not api methods.
+You can use `Norsu.initialPromise` for waiting end initializing api.
 Example:
 
 ```js
-WavesKeeper.initialPromise.then(keeperApi => {
+Norsu.initialPromise.then(keeperApi => {
   /*...init app*/
   keeperApi.publicState().then(state => startApp(state));
 });
@@ -69,7 +69,7 @@ If a website is trusted, Norsu public data are returned.
 Example:
 
 ```js
-WavesKeeper.publicState()
+Norsu.publicState()
   .then(state => {
     console.log(state); //displaying the result in the console
     /*...processing data */
@@ -85,7 +85,7 @@ or
 ```js
 const getPublicState = async () => {
   try {
-    const state = await WavesKeeper.publicState();
+    const state = await Norsu.publicState();
     console.log(state); // displaying the result in the console
     /*... processing data*/
   } catch (error) {
@@ -106,17 +106,17 @@ REPLY
     "account": {
         "name": "foo",
         "publicKey": "bar",
-        "address": "waves address",
+        "address": "tac address",
         "networkCode": "network byte",
         "balance": {
-            "available": "balance in waves",
+            "available": "balance in tac",
             "leasedOut": "leased balance"
         }
     },
     "network": {
         "code": "W",
-        "server": "https://nodes.wavesnodes.com/",
-        "matcher": "https://matcher.waves.exchange/"
+        "server": "https://nodes.tacnodes.com/",
+        "matcher": "https://matcher.tac.exchange/"
     },
     "messages": [],
     "txVersion": {
@@ -133,7 +133,7 @@ Description of query return fields
 - `initialized` - boolean keeper initialized
 - `locked` - boolean keeper in wait mode
 - `account` – current account, if the user allowed access to the website, or null
-- `network` – current Waves network, node and matcher addresses
+- `network` – current Tac network, node and matcher addresses
 - `messages` – signature request statuses
 - `txVersion` – available transaction versions for each type
 
@@ -158,7 +158,7 @@ return Promise
 Example:
 
 ```js
-WavesKeeper.notification({
+Norsu.notification({
   title: 'Hello!',
   message: 'Congratulation!!!',
 });
@@ -173,15 +173,15 @@ Possible errors
 
 #### encryptMessage
 
-You can encrypt string messages to account in Waves network.
+You can encrypt string messages to account in Tac network.
 You need have recipient publicKey.
 
-WavesKeeper.encryptMessage(`*string to encrypt*`, `*public key in base58 string*`, `*prefix is secret app string need for encoding*`)
+Norsu.encryptMessage(`*string to encrypt*`, `*public key in base58 string*`, `*prefix is secret app string need for encoding*`)
 
 Example:
 
 ```js
-WavesKeeper.encryptMessage(
+Norsu.encryptMessage(
   'My message',
   '416z9d8DQDy5MPTqDhvReRBaPb19gEyVRWvHcewpP6Nc',
   'my app'
@@ -199,15 +199,15 @@ Possible errors
 
 #### decryptMessage
 
-You can decrypt string messages from account in Waves network to you.
+You can decrypt string messages from account in Tac network to you.
 You need have sender publicKey and encrypted message.
 
-WavesKeeper.decryptMessage(`*string to decrypt*`, `*public key in base58 string*`, `*prefix is secret app string need for encoding*`)
+Norsu.decryptMessage(`*string to decrypt*`, `*public key in base58 string*`, `*prefix is secret app string need for encoding*`)
 
 Example:
 
 ```js
-WavesKeeper.decryptMessage(
+Norsu.decryptMessage(
   '**encrypted msg**',
   '416z9d8DQDy5MPTqDhvReRBaPb19gEyVRWvHcewpP6Nc',
   'my app'
@@ -234,8 +234,8 @@ Supports events:
 Example:
 
 ```js
-WavesKeeper.on('update', state => {
-  //state object as from WavesKeeper.publicState
+Norsu.on('update', state => {
+  //state object as from Norsu.publicState
 });
 ```
 
@@ -243,13 +243,13 @@ If a website is not trusted, events won't show.
 
 #### auth
 
-This is a method for obtaining a signature of authorization data while verifying Waves' user. It works the same way as [Web Auth API](https://docs.waves.exchange/en/waves-exchange/waves-exchange-client-api/waves-exchange-web-auth-api).
+This is a method for obtaining a signature of authorization data while verifying Tac' user. It works the same way as [Web Auth API](https://docs.tac.exchange/en/tac-exchange/tac-exchange-client-api/tac-exchange-web-auth-api).
 
 Example:
 
 ```js
 const authData = { data: 'Auth on my site' };
-WavesKeeper.auth(authData)
+Norsu.auth(authData)
   .then(auth => {
     console.log(auth); //displaying the result on the console
     /*...processing data */
@@ -265,7 +265,7 @@ or
 ```js
 const getAuthData = async authData => {
   try {
-    const state = await WavesKeeper.auth(authData);
+    const state = await Norsu.auth(authData);
     console.log(state); // displaying the result on the console
     /*... processing data */
   } catch (error) {
@@ -292,12 +292,12 @@ Example
 const authData = {
   data: 'Generated string from server',
   name: 'My test App',
-  icon: '/img/icons/waves_logo.svg',
-  referrer: 'https://waves.exchange/',
+  icon: '/img/icons/tac_logo.svg',
+  referrer: 'https://tac.exchange/',
   successPath: 'login',
 };
 
-WavesKeeper.auth(authData)
+Norsu.auth(authData)
   .then(data => {
     //data – data from Norsu
     //verifying signature and saving the address...
@@ -313,7 +313,7 @@ If the verification is successful, Norsu will return to the promise an object co
 - `host` – a host that requested a signature
 - `name` – the name of an application that requested a signature
 - `prefix` – a prefix participating in the signature
-- `address` – an address in Waves network
+- `address` – an address in Tac network
 - `publicKey` – the user's public key
 - `signature` - signature
 - `version` – API version
@@ -326,7 +326,7 @@ ERRORS
 
 #### signTransaction
 
-A method for signing transactions in Waves' network.
+A method for signing transactions in Tac' network.
 
 Example:
 
@@ -335,19 +335,19 @@ const txData = {
   type: 4,
   data: {
     amount: {
-      assetId: 'WAVES',
+      assetId: 'TAC',
       tokens: '1.567',
     },
     fee: {
-      assetId: 'WAVES',
+      assetId: 'TAC',
       tokens: '0.001',
     },
     recipient: 'test',
   },
 };
-WavesKeeper.signTransaction(txData)
+Norsu.signTransaction(txData)
   .then(data => {
-    //data – a line ready for sending to Waves network's node (server)
+    //data – a line ready for sending to Tac network's node (server)
   })
   .catch(error => {
     //Processing errors
@@ -358,7 +358,7 @@ API returns lines, not an object, as in javascript precision is lost in operatio
 
 A description of supported transaction types is below.
 
-In the example, we are signing a transaction for transferring WAVES to the alias `test`in Waves' network.
+In the example, we are signing a transaction for transferring TAC to the alias `test`in Tac' network.
 
 REPLY
 
@@ -395,20 +395,20 @@ const txData = {
   type: 4,
   data: {
     amount: {
-      assetId: 'WAVES',
+      assetId: 'TAC',
       tokens: '1.567',
     },
     fee: {
-      assetId: 'WAVES',
+      assetId: 'TAC',
       tokens: '0.001',
     },
     recipient: 'test',
   },
 };
 
-WavesKeeper.signAndPublishTransaction(txData)
+Norsu.signAndPublishTransaction(txData)
   .then(data => {
-    //data - a line ready for sending to Waves network's node (server)
+    //data - a line ready for sending to Tac network's node (server)
   })
   .catch(error => {
     //processing errors
@@ -417,7 +417,7 @@ WavesKeeper.signAndPublishTransaction(txData)
 
 REPLY
 
-A reply from Waves network returns as a line containing the entire past transaction.
+A reply from Tac network returns as a line containing the entire past transaction.
 
 ERRORS
 
@@ -432,9 +432,9 @@ A package transaction signature. Sometimes several transactions need to be simul
 - `4` – transfer a token
 - `5` – reissues a token
 - `6` – burns a token
-- `8` – leases WAVES
+- `8` – leases TAC
 - `9` – cancels the leasing
-- `10` – creating an alias for an address in Waves network
+- `10` – creating an alias for an address in Tac network
 - `11` – mass transfer
 - `12` - adds, modifies and deletes data entries in the sender's account data storage
 - `13` - assigns the dApp script or account script to the sender's account
@@ -451,11 +451,11 @@ const tx = [
     type: 4,
     data: {
       amount: {
-        assetId: 'WAVES',
+        assetId: 'TAC',
         tokens: '1.567',
       },
       fee: {
-        assetId: 'WAVES',
+        assetId: 'TAC',
         tokens: '0.001',
       },
       recipient: 'test',
@@ -465,11 +465,11 @@ const tx = [
     type: 4,
     data: {
       amount: {
-        assetId: 'WAVES',
+        assetId: 'TAC',
         tokens: '0.51',
       },
       fee: {
-        assetId: 'WAVES',
+        assetId: 'TAC',
         tokens: '0.001',
       },
       recipient: 'merry',
@@ -477,13 +477,13 @@ const tx = [
   },
 ];
 
-WavesKeeper.signTransactionPackage(tx, name);
+Norsu.signTransactionPackage(tx, name);
 ```
 
 Sign two transaction:
 
-- Transfer 1.567 WAVES to the alias test
-- Transfer 0.1 WAVES to the alias merry
+- Transfer 1.567 TAC to the alias test
+- Transfer 0.1 TAC to the alias merry
 
 REPLY
 
@@ -493,10 +493,10 @@ ERRORS
 
 Same as in `signTransaction`
 
-##### [Transactions](https://docs.waves.tech/en/building-apps/waves-api-and-sdk/client-libraries/waves-transactions)\*\*
+##### [Transactions](https://docs.tac.tech/en/building-apps/tac-api-and-sdk/client-libraries/tac-transactions)\*\*
 
-Every user of Waves' network has a state (balances, assets, data, scripts), and every past transactions changes these data. \
-In Norsu API it is different from [NODE REST API](https://docs.waves.tech/en/waves-node/node-api/).
+Every user of Tac' network has a state (balances, assets, data, scripts), and every past transactions changes these data. \
+In Norsu API it is different from [NODE REST API](https://docs.tac.tech/en/tac-node/node-api/).
 
 `signTransaction`, `signAndPublishTransaction` accept transactions as follows
 
@@ -511,7 +511,7 @@ In Norsu API it is different from [NODE REST API](https://docs.waves.tech/en/wav
 
 Legend keys
 
-- - optional field, data are automatically supplied from WavesKeeper. \
+- - optional field, data are automatically supplied from Norsu. \
     [x,y] – length limit from x to y. \
     [,x] – length limit to x. \
     [y,] – length limit from y. \
@@ -520,15 +520,15 @@ Legend keys
 
 MoneyLike could look as:
 
-- `{ tokens: 1, assetId: "WAVES" }`
-- `{ coins: 100000000, assetId: "WAVES" }`;
+- `{ tokens: 1, assetId: "TAC" }`
+- `{ coins: 100000000, assetId: "TAC" }`;
 
-In both messages, the same price of 1 WAVES is indicated. You can easily convert `coins`into `tokens`and back, if you know in what asset the price is indicated, and you have received its precision `tokens = coins / (10 ** precision)` \
+In both messages, the same price of 1 TAC is indicated. You can easily convert `coins`into `tokens`and back, if you know in what asset the price is indicated, and you have received its precision `tokens = coins / (10 ** precision)` \
 If the field contains other types than MoneyLike, for instance, string/MoneyLike , the sum is indicated as a number in  `coins`.
 
 ---
 
-###### [Type 3 ISSUE – token issue](https://docs.waves.tech/en/blockchain/transaction-type/issue-transaction)\*\*
+###### [Type 3 ISSUE – token issue](https://docs.tac.tech/en/blockchain/transaction-type/issue-transaction)\*\*
 
 - `name` [4, 16] string – token name,
 - `description` [0, 1000] string – token description,
@@ -536,14 +536,14 @@ If the field contains other types than MoneyLike, for instance, string/MoneyLike
 - `precision` [0 - 8] number - precision,
 - `reissuable` true|false – re-issuable,
 - `*fee` MoneyLike -fee
-- `*script` string – [smart asset](https://docs.waves.tech/en/building-apps/smart-contracts/what-is-smart-asset)
+- `*script` string – [smart asset](https://docs.tac.tech/en/building-apps/smart-contracts/what-is-smart-asset)
 - `*senderPublicKey` string – sender's public key in base58
 - `*timestamp` number/string – time in ms
 
 Example:
 
 ```js
-WavesKeeper.signAndPublishTransaction({
+Norsu.signAndPublishTransaction({
   type: 3,
   data: {
     name: 'Best Token',
@@ -553,7 +553,7 @@ WavesKeeper.signAndPublishTransaction({
     reissuable: true,
     fee: {
       tokens: '1',
-      assetId: 'WAVES',
+      assetId: 'TAC',
     },
   },
 })
@@ -567,7 +567,7 @@ WavesKeeper.signAndPublishTransaction({
 
 In case of a success, we are issuing a new asset in the quantity of 1,000,000, and your balance will show 10,000.00 Best Token
 
-###### [Type 4 TRANSFER – asset transfer](https://docs.waves.tech/en/blockchain/transaction-type/transfer-transaction)\*\*
+###### [Type 4 TRANSFER – asset transfer](https://docs.tac.tech/en/blockchain/transaction-type/transfer-transaction)\*\*
 
 - `amount` MoneyLike - amount,
 - `recipient` string – recipient's address or alias
@@ -579,23 +579,23 @@ In case of a success, we are issuing a new asset in the quantity of 1,000,000, a
 Example:
 
 ```js
-WavesKeeper.signAndPublishTransaction({
+Norsu.signAndPublishTransaction({
   type: 4,
   data: {
-    amount: { tokens: '3.3333333', assetId: 'WAVES' },
-    fee: { tokens: '0.001', assetId: 'WAVES' },
+    amount: { tokens: '3.3333333', assetId: 'TAC' },
+    fee: { tokens: '0.001', assetId: 'TAC' },
     recipient: 'merry',
   },
 })
   .then(tx => {
-    console.log("Hurray! I've been able to send WAVES!!!");
+    console.log("Hurray! I've been able to send TAC!!!");
   })
   .catch(error => {
     console.error('Something went wrong', error);
   });
 ```
 
-###### [Type 5 REISSUE – token reissue](https://docs.waves.tech/en/blockchain/transaction-type/reissue-transaction)\*\*
+###### [Type 5 REISSUE – token reissue](https://docs.tac.tech/en/blockchain/transaction-type/reissue-transaction)\*\*
 
 - `assetId` string - "asset ID",
 - `quantity` [0 - (JLM)] number/string/MoneyLike - quantity,
@@ -607,7 +607,7 @@ WavesKeeper.signAndPublishTransaction({
 Example:
 
 ```js
-WavesKeeper.signAndPublishTransaction({
+Norsu.signAndPublishTransaction({
   type: 5,
   data: {
     quantity: 1000,
@@ -615,7 +615,7 @@ WavesKeeper.signAndPublishTransaction({
     reissuable: true,
     fee: {
       tokens: '1',
-      assetId: 'WAVES',
+      assetId: 'TAC',
     },
   },
 })
@@ -629,7 +629,7 @@ WavesKeeper.signAndPublishTransaction({
 
 In case of a success, we are re-issuing a new asset in the quantity of 1,000,000, and your balance will show 10,000.00 Best Token
 
-###### [Type 6 BURN – burning tokens](https://docs.waves.tech/en/blockchain/transaction-type/burn-transaction)\*\*
+###### [Type 6 BURN – burning tokens](https://docs.tac.tech/en/blockchain/transaction-type/burn-transaction)\*\*
 
 - `assetId` string – asset ID,
 - `amount` [0 - (JLM)] number/string/MoneyLike - quantity,
@@ -640,14 +640,14 @@ In case of a success, we are re-issuing a new asset in the quantity of 1,000,000
 Example:
 
 ```js
-WavesKeeper.signAndPublishTransaction({
+Norsu.signAndPublishTransaction({
   type: 6,
   data: {
     amount: 1000,
     assetId: '8LQW8f7P5d5PZM7GtZEBgaqRPGSzS3DfPuiXrURJ4AJS',
     fee: {
       tokens: '0.001',
-      assetId: 'WAVES',
+      assetId: 'TAC',
     },
   },
 })
@@ -661,7 +661,7 @@ WavesKeeper.signAndPublishTransaction({
 
 In case of a success, 1,000 coins `are burned`.
 
-###### [Type 8 LEASE - Leasing](https://docs.waves.tech/en/blockchain/transaction-type/lease-transaction)\*\*
+###### [Type 8 LEASE - Leasing](https://docs.tac.tech/en/blockchain/transaction-type/lease-transaction)\*\*
 
 - `recipient` string – recipient's address or alias,
 - `amount` [0 - (JLM)] number/string/MoneyLike - quantity,
@@ -672,14 +672,14 @@ In case of a success, 1,000 coins `are burned`.
 Example:
 
 ```js
-WavesKeeper.signAndPublishTransaction({
+Norsu.signAndPublishTransaction({
   type: 8,
   data: {
     amount: 1000,
     recipient: 'merry',
     fee: {
       tokens: '0.001',
-      assetId: 'WAVES',
+      assetId: 'TAC',
     },
   },
 })
@@ -691,9 +691,9 @@ WavesKeeper.signAndPublishTransaction({
   });
 ```
 
-In case of a success, 0.00001000 WAVES is leased.
+In case of a success, 0.00001000 TAC is leased.
 
-###### [Type 9 LEASE CANCEL – cancel leasing](https://docs.waves.tech/en/blockchain/transaction-type/lease-cancel-transaction)\*\*
+###### [Type 9 LEASE CANCEL – cancel leasing](https://docs.tac.tech/en/blockchain/transaction-type/lease-cancel-transaction)\*\*
 
 - `leaseId` string – leasing transaction ID,
 - `*fee` MoneyLike -fee
@@ -703,13 +703,13 @@ In case of a success, 0.00001000 WAVES is leased.
 Example:
 
 ```js
-WavesKeeper.signAndPublishTransaction({
+Norsu.signAndPublishTransaction({
   type: 9,
   data: {
     leaseId: '6frvwF8uicAfyEfTfyC2sXqBJH7V5C8he5K4YH3BkNiS',
     fee: {
       tokens: '0.001',
-      assetId: 'WAVES',
+      assetId: 'TAC',
     },
   },
 })
@@ -723,7 +723,7 @@ WavesKeeper.signAndPublishTransaction({
 
 In case of a success, the leasing transaction is cancelled.
 
-###### [Type 10 CREATE ALIAS – creating an alias for an address](https://docs.waves.tech/en/blockchain/transaction-type/create-alias-transaction)\*\*
+###### [Type 10 CREATE ALIAS – creating an alias for an address](https://docs.tac.tech/en/blockchain/transaction-type/create-alias-transaction)\*\*
 
 - `alias`[4, 30] string - alias
 - `*fee` MoneyLike -fee
@@ -733,13 +733,13 @@ In case of a success, the leasing transaction is cancelled.
 Example:
 
 ```js
-WavesKeeper.signAndPublishTransaction({
+Norsu.signAndPublishTransaction({
   type: 10,
   data: {
     alias: 'testAlias',
     fee: {
       tokens: '0.001',
-      assetId: 'WAVES',
+      assetId: 'TAC',
     },
   },
 })
@@ -753,7 +753,7 @@ WavesKeeper.signAndPublishTransaction({
 
 In case of a success, an alias (another name) is created.
 
-###### [Type 11 MASS TRANSFER - a mass transfer of an asset](https://docs.waves.tech/en/blockchain/transaction-type/mass-transfer-transaction)\*\*
+###### [Type 11 MASS TRANSFER - a mass transfer of an asset](https://docs.tac.tech/en/blockchain/transaction-type/mass-transfer-transaction)\*\*
 
 - `totalAmount` moneyLike – total to be sent // instead of calculating the amount you may insert { assetId: "ID of the asset to be sent", coins: 0},
 - `transfers`  a mass of objects
@@ -766,17 +766,17 @@ In case of a success, an alias (another name) is created.
 Example:
 
 ```js
-WavesKeeper.signAndPublishTransaction({
+Norsu.signAndPublishTransaction({
   type: 11,
   data: {
-    totalAmount: { assetId: 'WAVES', coins: 0 },
+    totalAmount: { assetId: 'TAC', coins: 0 },
     transfers: [
       { recipient: 'alias1', amount: '200000' },
       { recipient: 'alias2', amount: '200000' },
     ],
     fee: {
       tokens: '0.002',
-      assetId: 'WAVES',
+      assetId: 'TAC',
     },
   },
 })
@@ -788,9 +788,9 @@ WavesKeeper.signAndPublishTransaction({
   });
 ```
 
-In case of a success, 0.002 WAVES will be sent to alias1 and alias2.
+In case of a success, 0.002 TAC will be sent to alias1 and alias2.
 
-###### [Type 12 DATA TRANSACTION - saving data](https://docs.waves.tech/en/blockchain/transaction-type/data-transaction)\*\*
+###### [Type 12 DATA TRANSACTION - saving data](https://docs.tac.tech/en/blockchain/transaction-type/data-transaction)\*\*
 
 - `data`  mass of objects
   - `type` "binary"/string/"integer"/"boolean" - type,
@@ -803,7 +803,7 @@ In case of a success, 0.002 WAVES will be sent to alias1 and alias2.
 Field:
 
 ```js
-WavesKeeper.signAndPublishTransaction({
+Norsu.signAndPublishTransaction({
   type: 12,
   data: {
     data: [
@@ -822,7 +822,7 @@ WavesKeeper.signAndPublishTransaction({
     ],
     fee: {
       tokens: '0.01',
-      assetId: 'WAVES',
+      assetId: 'TAC',
     },
   },
 })
@@ -836,25 +836,25 @@ WavesKeeper.signAndPublishTransaction({
 
 In case of a success, new data will be stored in the state.
 
-###### [Type 13 SET SCRIPT – scripting an account](https://docs.waves.tech/en/blockchain/transaction-type/set-script-transaction)\*\*
+###### [Type 13 SET SCRIPT – scripting an account](https://docs.tac.tech/en/blockchain/transaction-type/set-script-transaction)\*\*
 
-- `script` string - [script](https://docs.waves.tech/en/building-apps/smart-contracts/waves-smart-contracts-overview)
+- `script` string - [script](https://docs.tac.tech/en/building-apps/smart-contracts/tac-smart-contracts-overview)
 - `*fee` MoneyLike -fee
 - `*senderPublicKey` string - sender's public key in base58
 - `*timestamp` number/string – time in ms
 
-For cancelling a script the field `script` has to be `null`. [Script development on RIDE](https://waves-ide.com/)
+For cancelling a script the field `script` has to be `null`. [Script development on RIDE](https://tac-ide.com/)
 
 Example:
 
 ```js
-WavesKeeper.signAndPublishTransaction({
+Norsu.signAndPublishTransaction({
   type: 13,
   data: {
     script: '',
     fee: {
       tokens: '0.04',
-      assetId: 'WAVES',
+      assetId: 'TAC',
     },
   },
 })
@@ -871,14 +871,14 @@ In case of a success, the script will be removed from the account.
 Example 2:
 
 ```js
-WavesKeeper.signAndPublishTransaction({
+Norsu.signAndPublishTransaction({
   type: 13,
   data: {
     script:
       'base64:AQa3b8tHAQa3b8tHAQa3b8tHAQa3b8tHAQa3b8tHAQa3b8tHAQa3b8tHAQa3b8tHAQa3b8tHAQa3b8tHAQa3b8tH',
     fee: {
       tokens: '0.01',
-      assetId: 'WAVES',
+      assetId: 'TAC',
     },
   },
 })
@@ -892,7 +892,7 @@ WavesKeeper.signAndPublishTransaction({
 
 In case of a success, a new script will be added to the account, allowing any transactions without a signature (be careful!).
 
-###### [Type 14 Sponsored Fee Transaction - Sponsorship](https://docs.waves.tech/en/blockchain/transaction-type/sponsor-fee-transaction)\*\*
+###### [Type 14 Sponsored Fee Transaction - Sponsorship](https://docs.tac.tech/en/blockchain/transaction-type/sponsor-fee-transaction)\*\*
 
 - `minSponsoredAssetFee` MoneyLike – fee price in the asset.
 - `*fee` MoneyLike - fee
@@ -902,7 +902,7 @@ In case of a success, a new script will be added to the account, allowing any tr
 Example:
 
 ```js
-WavesKeeper.signAndPublishTransaction({
+Norsu.signAndPublishTransaction({
   type: 14,
   data: {
     minSponsoredAssetFee: {
@@ -911,7 +911,7 @@ WavesKeeper.signAndPublishTransaction({
     },
     fee: {
       tokens: '1',
-      assetId: 'WAVES',
+      assetId: 'TAC',
     },
   },
 })
@@ -925,27 +925,27 @@ WavesKeeper.signAndPublishTransaction({
 
 In case of a success, a transfer fee can be paid in the asset.
 
-###### [Type 15 SET ASSET SCRIPT – setting a script to an asset](https://docs.waves.tech/en/blockchain/transaction-type/set-asset-script-transaction)\*\*
+###### [Type 15 SET ASSET SCRIPT – setting a script to an asset](https://docs.tac.tech/en/blockchain/transaction-type/set-asset-script-transaction)\*\*
 
 - `assetId` string – asset ID
-- `script` string – [script](https://docs.waves.tech/en/building-apps/smart-contracts/what-is-smart-asset)
+- `script` string – [script](https://docs.tac.tech/en/building-apps/smart-contracts/what-is-smart-asset)
 - `*fee` MoneyLike – fee
 - `*senderPublicKey` string - sender's public key in base58
 - `*timestamp` number/string – time in ms
 
-It's now impossible to cancel a script, you can only add a new script. [Script development on RIDE](https://waves-ide.com/)
+It's now impossible to cancel a script, you can only add a new script. [Script development on RIDE](https://tac-ide.com/)
 
 Example:
 
 ```js
-WavesKeeper.signAndPublishTransaction({
+Norsu.signAndPublishTransaction({
   type: 15,
   data: {
     assetId: '',
     script: 'base64:AQa3b8tH',
     fee: {
       tokens: '0.01',
-      assetId: 'WAVES',
+      assetId: 'TAC',
     },
   },
 })
@@ -959,7 +959,7 @@ WavesKeeper.signAndPublishTransaction({
 
 In case of a success, the asset's script will be reset.
 
-###### [Type 16 SCRIPT INVOCATION - call account script function](https://docs.waves.tech/en/blockchain/transaction-type/invoke-script-transaction)\*\*
+###### [Type 16 SCRIPT INVOCATION - call account script function](https://docs.tac.tech/en/blockchain/transaction-type/invoke-script-transaction)\*\*
 
 - `dApp` string – address script account
 - `call` object –
@@ -975,12 +975,12 @@ In case of a success, the asset's script will be reset.
 Example:
 
 ```js
-WavesKeeper.signAndPublishTransaction({
+Norsu.signAndPublishTransaction({
   type: 16,
   data: {
     fee: {
       tokens: '0.05',
-      assetId: 'WAVES',
+      assetId: 'TAC',
     },
     dApp: '3N27HUMt4ddx2X7foQwZRmpFzg5PSzLrUgU',
     call: {
@@ -992,7 +992,7 @@ WavesKeeper.signAndPublishTransaction({
         },
       ],
     },
-    payment: [{ assetId: 'WAVES', tokens: 2 }],
+    payment: [{ assetId: 'TAC', tokens: 2 }],
   },
 })
   .then(tx => {
@@ -1005,7 +1005,7 @@ WavesKeeper.signAndPublishTransaction({
 
 In case of a success, invoke script function `tellme` in testnet account `3N27HUMt4ddx2X7foQwZRmpFzg5PSzLrUgU`
 
-##### [Calculating transaction fees](https://docs.waves.tech/en/blockchain/transaction/transaction-fee)\*\*
+##### [Calculating transaction fees](https://docs.tac.tech/en/blockchain/transaction/transaction-fee)\*\*
 
 ---
 
@@ -1026,7 +1026,7 @@ Norsu's method for signing an order to the matcher. As input, it accepts an obje
 - `amount` MoneyLike - amount
 - `price` MoneyLike - price
 - `orderType` 'sell'/'buy' – order type
-- `matcherFee` MoneyLike - fee (0.003 WAVES minimum),
+- `matcherFee` MoneyLike - fee (0.003 TAC minimum),
 - `matcherPublicKey` string - the public key of the exchange service
 - `expiration` string/number – the order's expiration time
 - `*timestamp` string/number - current time
@@ -1035,7 +1035,7 @@ Norsu's method for signing an order to the matcher. As input, it accepts an obje
 Example:
 
 ```js
-WavesKeeper.signOrder({
+Norsu.signOrder({
   type: 1002,
   data: {
     matcherPublicKey: '7kPFrHDiGw1rCm7LPszuECwWYL3dMf6iMifLRDJQZMzy',
@@ -1043,7 +1043,7 @@ WavesKeeper.signOrder({
     expiration: Date.now() + 100000,
     amount: {
       tokens: '100',
-      assetId: 'WAVES',
+      assetId: 'TAC',
     },
     price: {
       tokens: '0.01',
@@ -1051,7 +1051,7 @@ WavesKeeper.signOrder({
     },
     matcherFee: {
       tokens: '0.03',
-      assetId: 'WAVES',
+      assetId: 'TAC',
     },
   },
 })
@@ -1101,7 +1101,7 @@ Norsu's method for signing cancellation of an order to the matcher. As input, it
 Example:
 
 ```js
-WavesKeeper.signCancelOrder({
+Norsu.signCancelOrder({
   type: 1003,
   data: {
     id: '31EeVpTAronk95TjCHdyaveDukde4nDr9BfFpvhZ3Sap',
@@ -1125,10 +1125,10 @@ but also tries to send data to the matcher. For api need know also 2 field `pric
 Example:
 
 ```js
-WavesKeeper.signAndPublishCancelOrder({
+Norsu.signAndPublishCancelOrder({
   type: 1003,
   priceAsset: '8LQW8f7P5d5PZM7GtZEBgaqRPGSzS3DfPuiXrURJ4AJS',
-  amountAsset: 'WAVES',
+  amountAsset: 'TAC',
   data: {
     id: '31EeVpTAronk95TjCHdyaveDukde4nDr9BfFpvhZ3Sap',
   },
@@ -1171,7 +1171,7 @@ Currently, the method supports the following types:
 Example:
 
 ```js
-WavesKeeper.signRequest({
+Norsu.signRequest({
   type: 1001,
   data: {
     timestamp: 234234242423423,
@@ -1196,12 +1196,12 @@ Method Norsu for sign custom data for different services, it accepts an object:
 - `version` 1
 - `binary` string 'base64:....'
 
-Note: This method adds the `[255, 255, 255, 1]` prefix to the signed bytes. This was done to make it impossible to sign transaction data in this method, which can lead to unauthenticated transactions and phishing. For the details check `serializeCustomData` method in [waves-transactions](https://github.com/wavesplatform/waves-transactions/blob/master/src/requests/custom-data.ts#L63) library.
+Note: This method adds the `[255, 255, 255, 1]` prefix to the signed bytes. This was done to make it impossible to sign transaction data in this method, which can lead to unauthenticated transactions and phishing. For the details check `serializeCustomData` method in [tac-transactions](https://github.com/tacplatform/tac-transactions/blob/master/src/requests/custom-data.ts#L63) library.
 
 Example:
 
 ```js
-WavesKeeper.signCustomData({
+Norsu.signCustomData({
   version: 1,
   binary: 'base64:AADDEE==',
 });
@@ -1233,12 +1233,12 @@ ERRORS:
   - `value` /string/string/number/boolean
 
 Bytes to sign: [255, 255, 255, 2, ...(from data Array to bin)]
-[waves-transaction library](https://github.com/wavesplatform/waves-transactions/blob/master/src/requests/custom-data.ts)
+[tac-transaction library](https://github.com/tacplatform/tac-transactions/blob/master/src/requests/custom-data.ts)
 
 Example:
 
 ```js
-WavesKeeper.signCustomData({
+Norsu.signCustomData({
   version: 2,
   data: [{ type: 'string', key: 'name', value: 'Mr. First' }],
 });
@@ -1288,7 +1288,7 @@ or
 Example:
 
 ```js
-WavesKeeper.verifyCustomData({
+Norsu.verifyCustomData({
   version: 1,
   binary: 'base64:AADDEE==',
   publicKey: '3BvAsKuGZe2LbSwKr9SA7eSXcNDKnRqN1j2K2bZaTn5X',
@@ -1311,7 +1311,7 @@ Check allow API status for your origin
 Example:
 
 ```js
-WavesKeeper.resourceIsApproved().then(result => {
+Norsu.resourceIsApproved().then(result => {
   console.log(result);
 });
 ```
@@ -1325,7 +1325,7 @@ Check block API status for your origin
 Example:
 
 ```js
-WavesKeeper.resourceIsBlocked().then(result => {
+Norsu.resourceIsBlocked().then(result => {
   console.log(result);
 });
 ```

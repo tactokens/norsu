@@ -1,4 +1,4 @@
-import { Money } from '@waves/data-entities';
+import { Money } from '@tac/data-entities';
 
 export function moneylikeToMoney(moneylike, asset) {
   return new Money(moneylike.value, asset);

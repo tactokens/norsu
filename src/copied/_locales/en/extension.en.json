@@ -70,7 +70,7 @@
   "conditions": {
     "accept": "Accept",
     "agreement": "Agreement",
-    "attention": "ATTENTION: PLEASE READ CAREFULLY THESE TERMS AND CONDITIONS AS THEY AFFECT YOUR OBLIGATIONS AND LEGAL RIGHTS, INCLUDING, BUT NOT LIMITED TO WAIVERS OF RIGHTS AND LIMITATION OF LIABILITY. IF YOU DO NOT AGREE WITH THESE TERMS AND CONDITIONS DO NOT PROCEED WITH REGISTRATION AT WAVES PLATFORM",
+    "attention": "ATTENTION: PLEASE READ CAREFULLY THESE TERMS AND CONDITIONS AS THEY AFFECT YOUR OBLIGATIONS AND LEGAL RIGHTS, INCLUDING, BUT NOT LIMITED TO WAIVERS OF RIGHTS AND LIMITATION OF LIABILITY. IF YOU DO NOT AGREE WITH THESE TERMS AND CONDITIONS DO NOT PROCEED WITH REGISTRATION AT TAC PLATFORM",
     "title": "Terms and conditions"
   },
   "confirmBackup": {
@@ -332,7 +332,7 @@
     "requestRejected": "Request has not been signed",
     "signAccessHost": "wants to access your TAC Address",
     "signAccessInfo": "The application will have access to your TAC address but will not expose your SEED or private key. Never enter your secret phrase (SEED) on any website you are redirected to.",
-    "signAccessWaves": "Sign in with Norsu",
+    "signAccessTac": "Sign in with Norsu",
     "signButton": "Sign",
     "someError": "Something went wrong",
     "switchAccount": "Switch account",
@@ -365,7 +365,7 @@
     "transactionSendTransfer": "You have sent transfer",
     "understand": "I understand",
     "viewTransaction": "View transaction",
-    "wavesAuthConfirmed": "Sign a waves auth request!"
+    "tacAuthConfirmed": "Sign a tac auth request!"
   },
   "transactions": {
     "allowAccess": "Allow access",
@@ -447,11 +447,11 @@
     "setSponsored": "Set Sponsorship",
     "showAll": "Show all",
     "showTransactions": "Show transactions",
-    "signAccessWaves": "Sign in with Norsu",
+    "signAccessTac": "Sign in with Norsu",
     "signCustomRequest": "Sign a request",
     "signMatcherRequest": "Sign a request to the Matcher",
     "signRequestMatcher": "Sign a request to the Matcher",
-    "signRequestWavesAuth": "Sign a TAC auth request",
+    "signRequestTacAuth": "Sign a TAC auth request",
     "signToMatcher": "Sign a request to the Matcher",
     "to": "To",
     "total": "Total",
@@ -467,8 +467,8 @@
     "txid": "TXID",
     "txTime": "TX Time",
     "unknown": "Unknown",
-    "waves": "WAVES",
-    "wavesAuthTimeStamp": "Time Stamp"
+    "tac": "TAC",
+    "tacAuthTimeStamp": "Time Stamp"
   },
   "ui": {
     "accountName": "Account name",

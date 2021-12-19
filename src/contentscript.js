@@ -10,7 +10,7 @@ if (shouldInject()) {
 
 // function initKeeper() {
 //     let cbs = [];
-//     window.WavesKeeper = window.Waves = {
+//     window.Norsu = window.Tac = {
 //         on: function (event, cb) { cbs.push({ event, cb }) },
 //         _inited: function (api) {
 //             cbs.forEach(function ({ event, cb }) {
@@ -43,8 +43,8 @@ function injectBundle() {
 
 function setupConnection() {
   const pageStream = new LocalMessageDuplexStream({
-    name: 'waves_keeper_content',
-    target: 'waves_keeper_page',
+    name: 'tac_keeper_content',
+    target: 'tac_keeper_page',
   });
 
   const pluginPort = extension.runtime.connect({ name: 'contentscript' });
@@ -52,7 +52,7 @@ function setupConnection() {
 
   // forward communication plugin->inpage
   pump(pageStream, pluginStream, pageStream, err =>
-    logStreamDisconnectWarning('Waveskeeper Contentscript Forwarding', err)
+    logStreamDisconnectWarning('Tackeeper Contentscript Forwarding', err)
   );
 }
 
@@ -63,7 +63,7 @@ function setupConnection() {
  * @param {Error} err Stream connection error
  */
 function logStreamDisconnectWarning(remoteLabel, err) {
-  let warningMsg = `WaveskeeperContentscript - lost connection to ${remoteLabel}`;
+  let warningMsg = `TackeeperContentscript - lost connection to ${remoteLabel}`;
   if (err) warningMsg += '\n' + err.stack;
   console.warn(warningMsg);
 }

@@ -4,7 +4,7 @@ import { Copy } from '../ui';
 import * as styles from './wallet.styl';
 import { WalletItem } from './';
 import cn from 'classnames';
-import { getExplorerUrls } from '../../utils/waves';
+import { getExplorerUrls } from '../../utils/tac';
 
 export function ActiveWallet({
   className = '',

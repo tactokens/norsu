@@ -1,18 +1,18 @@
-import { SIGN_TYPE } from '@waves/signature-adapter';
+import { SIGN_TYPE } from '@tac/signature-adapter';
 
 export const messageType = 'auth';
 export const txType = 'auth';
 
 export function getAssetsId(tx = null): Array<string> {
-  return ['WAVES'];
+  return ['TAC'];
 }
 
 export function getFee(tx = null) {
-  return { coins: 0, assetId: 'WAVES' };
+  return { coins: 0, assetId: 'TAC' };
 }
 
 export function getAmount(tx = null) {
-  return { coins: 0, assetId: 'WAVES' };
+  return { coins: 0, assetId: 'TAC' };
 }
 
 export function getAmountSign() {

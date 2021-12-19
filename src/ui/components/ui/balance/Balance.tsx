@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ASSETS_NAMES } from '../../../appConfig';
-import { Money } from '@waves/data-entities';
-import { BigNumber } from '@waves/bignumber';
+import { Money } from '@tac/data-entities';
+import { BigNumber } from '@tac/bignumber';
 import { Loader } from '../loader';
 import { connect } from 'react-redux';
 import { getAsset } from '../../../actions';
@@ -36,11 +36,11 @@ const BalanceComponent = ({
     case balance instanceof Money && !balance.getTokens().isNaN():
       balanceOut = balance as Money;
       break;
-    case !assets['WAVES']:
-      getAsset('WAVES');
+    case !assets['TAC']:
+      getAsset('TAC');
       return <Loading>{children}</Loading>;
     case new BigNumber(balance as string).isNaN() === false:
-      balanceOut = Money.fromTokens(balance as string, assets['WAVES']);
+      balanceOut = Money.fromTokens(balance as string, assets['TAC']);
       break;
     default:
       return <div>N/A</div>;

@@ -1,7 +1,7 @@
-import { BigNumber } from '@waves/bignumber';
+import { BigNumber } from '@tac/bignumber';
 import { getMoney, IMoneyLike } from '../../../utils/converters';
 import { getConfigByTransaction } from '../index';
-import { Money } from '@waves/data-entities';
+import { Money } from '@tac/data-entities';
 
 export const messageType = 'transactionPackage';
 export const txType = 'transactionPackage';
@@ -14,20 +14,20 @@ export function getTransactionData(item) {
 
 export function getAssetsId(tx): Array<string> {
   if (!Array.isArray(tx)) {
-    return ['WAVES'];
+    return ['TAC'];
   }
 
   const assets = tx.reduce((acc, item) => {
     const { tx, config } = getTransactionData(item);
     config.getAssetsId(tx).forEach(item => acc.add(item));
     return acc;
-  }, new Set(['WAVES']));
+  }, new Set(['TAC']));
 
   return Array.from(assets);
 }
 
 export function getFee(tx = null) {
-  return { coins: 0, assetId: 'WAVES' };
+  return { coins: 0, assetId: 'TAC' };
 }
 
 export function getFees(tx, assets) {
@@ -87,7 +87,7 @@ export function getPackageAmounts(tx = null, assets) {
 }
 
 export function getAmount(tx = null) {
-  return { coins: 0, assetId: 'WAVES' };
+  return { coins: 0, assetId: 'TAC' };
 }
 
 export function getAmountSign() {

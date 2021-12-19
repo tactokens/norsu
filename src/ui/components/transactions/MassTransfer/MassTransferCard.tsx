@@ -6,7 +6,7 @@ import cn from 'classnames';
 import { Attachment, Balance, Ellipsis, PlateCollapsable } from '../../ui';
 import { getMoney } from '../../../utils/converters';
 import { getAmount, getTransferAmount, messageType } from './parseTx';
-import { readAttachment } from '../../../utils/waves';
+import { readAttachment } from '../../../utils/tac';
 
 const MIN_COUNT = 0;
 const ADDRESS_LENGTH = 35;

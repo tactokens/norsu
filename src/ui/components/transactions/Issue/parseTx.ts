@@ -1,14 +1,14 @@
-import { SIGN_TYPE } from '@waves/signature-adapter';
-import { Asset, Money } from '@waves/data-entities';
+import { SIGN_TYPE } from '@tac/signature-adapter';
+import { Asset, Money } from '@tac/data-entities';
 
 export const messageType = 'issue';
 export const txType = 'transaction';
 
 export function getAssetsId(tx): Array<string> {
   const feeAssetId =
-    tx.fee && tx.fee.assetId ? tx.fee.assetId : tx.feeAssetId || 'WAVES';
+    tx.fee && tx.fee.assetId ? tx.fee.assetId : tx.feeAssetId || 'TAC';
   const amountAssetId =
-    tx.amount && tx.amount.assetId ? tx.amount.assetId : tx.assetId || 'WAVES';
+    tx.amount && tx.amount.assetId ? tx.amount.assetId : tx.assetId || 'TAC';
 
   if (feeAssetId === amountAssetId) {
     return [amountAssetId];

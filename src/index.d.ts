@@ -10,7 +10,7 @@ type TMC = any;
 type TSD = any;
 type TCD = any;
 
-export namespace WavesKeeper {
+export namespace Norsu {
   export function checkMessage(id: TId): Promise<TResult>;
   export function cancelMessage(id: TId): Promise<TStatus>;
 

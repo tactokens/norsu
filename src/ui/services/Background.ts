@@ -215,7 +215,7 @@ class Background {
     assetId: string,
     compareFields: { [assetField: string]: any } = {}
   ): Promise<any> {
-    assetId = assetId || 'WAVES';
+    assetId = assetId || 'TAC';
 
     if (this._assetsStore[assetId]) {
       return await this._assetsStore[assetId];

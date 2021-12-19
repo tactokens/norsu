@@ -1,8 +1,8 @@
 import ObservableStore from 'obs-store';
-import { libs } from '@waves/waves-transactions';
+import { libs } from '@tac/tac-transactions';
 import extension from 'extensionizer';
 import { detect } from '../lib/detectBrowser';
-import { WAVESKEEPER_ENV } from '../constants';
+import { TACKEEPER_ENV } from '../constants';
 
 export class StatisticsController {
   events = [];
@@ -38,7 +38,7 @@ export class StatisticsController {
       browser_version: this.browser.version,
       browser_version_major:
         this.browser.version && this.browser.version.split('.')[0],
-      environment: WAVESKEEPER_ENV,
+      environment: TACKEEPER_ENV,
       network: network,
       chainId: networkCode ? networkCode.charCodeAt(0) : undefined,
       extensionId: this.id,
@@ -46,7 +46,7 @@ export class StatisticsController {
 
     this.events.push({
       user_id: userId,
-      device_id: 'waves_keeper',
+      device_id: 'tac_keeper',
       app_version: this.version,
       platform: this.browser.os,
       language:

@@ -1,12 +1,12 @@
-import { SIGN_TYPE } from '@waves/signature-adapter';
+import { SIGN_TYPE } from '@tac/signature-adapter';
 
 export const messageType = 'cancel-leasing';
 export const txType = 'transaction';
 
 export function getAssetsId(tx): Array<string> {
   const feeAssetId =
-    tx.fee && tx.fee.assetId ? tx.fee.assetId : tx.feeAssetId || 'WAVES';
-  const amountAssetId = 'WAVES';
+    tx.fee && tx.fee.assetId ? tx.fee.assetId : tx.feeAssetId || 'TAC';
+  const amountAssetId = 'TAC';
 
   if (feeAssetId === amountAssetId) {
     return [amountAssetId];
@@ -19,10 +19,10 @@ export { getFee } from '../BaseTransaction/parseTx';
 
 export function getAmount(tx = null, message) {
   if (!message || !message.lease) {
-    return { coins: null, assetId: 'WAVES' };
+    return { coins: null, assetId: 'TAC' };
   }
 
-  return { coins: message.lease.amount, assetId: 'WAVES' };
+  return { coins: message.lease.amount, assetId: 'TAC' };
 }
 
 export function getAmountSign() {

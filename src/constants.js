@@ -1,5 +1,5 @@
-export const WAVESKEEPER_DEBUG = process.env.NODE_ENV !== 'production';
-export const WAVESKEEPER_ENV = process.env.NODE_ENV || 'development';
+export const TACKEEPER_DEBUG = process.env.NODE_ENV !== 'production';
+export const TACKEEPER_ENV = process.env.NODE_ENV || 'development';
 
 export const CONFIG_URL =
   'https://raw.githubusercontent.com/tactokens/norsu/main/json/tac_norsu_blacklist.json';

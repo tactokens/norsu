@@ -15,10 +15,10 @@ const devConf = conf => ({
         enforce: 'pre',
         test: /\.js$/,
         exclude: [
-          '@waves/data-entities',
-          '@waves/money-like-to-node',
-          '@waves/node-api-js',
-          '@waves/ts-lib-crypto',
+          '@tac/data-entities',
+          '@tac/money-like-to-node',
+          '@tac/node-api-js',
+          '@tac/ts-lib-crypto',
         ].map(
           moduleName =>
             new RegExp(path.join(__dirname, 'node_modules', moduleName))

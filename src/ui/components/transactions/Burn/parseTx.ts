@@ -1,13 +1,13 @@
-import { SIGN_TYPE } from '@waves/signature-adapter';
+import { SIGN_TYPE } from '@tac/signature-adapter';
 
 export const messageType = 'burn';
 export const txType = 'transaction';
 
 export function getAssetsId(tx): Array<string> {
   const feeAssetId =
-    tx.fee && tx.fee.assetId ? tx.fee.assetId : tx.feeAssetId || 'WAVES';
+    tx.fee && tx.fee.assetId ? tx.fee.assetId : tx.feeAssetId || 'TAC';
   const amountAssetId =
-    tx.amount && tx.amount.assetId ? tx.amount.assetId : tx.assetId || 'WAVES';
+    tx.amount && tx.amount.assetId ? tx.amount.assetId : tx.assetId || 'TAC';
 
   if (feeAssetId === amountAssetId) {
     return [amountAssetId];
@@ -29,7 +29,7 @@ export function getAmount(tx = null) {
     return { coins, tokens, assetId: tx.assetId || assetId };
   }
 
-  return { coins: tx.amount, assetId: tx.assetId || 'WAVES' };
+  return { coins: tx.amount, assetId: tx.assetId || 'TAC' };
 }
 
 export function getAmountSign() {

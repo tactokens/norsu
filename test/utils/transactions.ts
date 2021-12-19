@@ -1,4 +1,4 @@
-import { TRANSACTION_TYPE } from '@waves/ts-types';
+import { TRANSACTION_TYPE } from '@tac/ts-types';
 
 export const ISSUE = {
   type: TRANSACTION_TYPE.ISSUE,

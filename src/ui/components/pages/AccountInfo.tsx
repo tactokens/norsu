@@ -14,10 +14,10 @@ import {
 } from '../ui';
 import background from '../../services/Background';
 import { getAsset, selectAccount } from '../../actions';
-import { Asset, Money } from '@waves/data-entities';
+import { Asset, Money } from '@tac/data-entities';
 import { PAGES } from '../../pageConfig';
-import { seedUtils } from '@waves/waves-transactions';
-import { getExplorerUrls } from 'ui/utils/waves';
+import { seedUtils } from '@tac/tac-transactions';
+import { getExplorerUrls } from 'ui/utils/tac';
 
 const { Seed } = seedUtils;
 
@@ -30,10 +30,10 @@ class AccountInfoComponent extends React.Component {
 
   static getDerivedStateFromProps(props) {
     const { selectedAccount, assets, balances } = props;
-    const asset = assets['WAVES'];
+    const asset = assets['TAC'];
 
     if (!asset) {
-      props.getAsset('WAVES');
+      props.getAsset('TAC');
       return { balance: null };
     }
     const assetInstance = new Asset(asset);

@@ -166,7 +166,7 @@ class ExtendedPermissionsComponent extends React.PureComponent<IProps, IState> {
             value={value}
             placeholder={0}
           />
-          <div className={styles.waves}>Waves</div>
+          <div className={styles.tac}>Tac</div>
         </div>
 
         <div className="flex margin-main-big margin-main-big-top">

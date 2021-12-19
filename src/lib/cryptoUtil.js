@@ -1,4 +1,4 @@
-import { libs } from '@waves/waves-transactions';
+import { libs } from '@tac/tac-transactions';
 
 function blake2b(input) {
   return libs.crypto.blake2b(input);

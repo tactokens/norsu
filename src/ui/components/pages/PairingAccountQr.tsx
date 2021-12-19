@@ -42,7 +42,7 @@ class PairingAccountQrComponent extends React.PureComponent {
       [styles.big]: setBig,
     });
 
-    const pairingData = `waves://export/${address}?encryptedSeed=${seed}&name=${name}`;
+    const pairingData = `tac://export/${address}?encryptedSeed=${seed}&name=${name}`;
 
     return (
       <div className={rootClassName}>

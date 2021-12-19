@@ -16,7 +16,7 @@ describe('Messages', function () {
   const sendMessage = () => {
     const done = arguments[arguments.length - 1];
     // @ts-ignore
-    WavesKeeper.initialPromise.then(api => {
+    Norsu.initialPromise.then(api => {
       api
         .notification({ title: 'Hello!', message: 'World!' })
         .then(done)
@@ -45,7 +45,7 @@ describe('Messages', function () {
     await CreateNewAccount.importAccount.call(
       this,
       'rich',
-      'waves private node seed with waves tokens'
+      'tac private node seed with tac tokens'
     );
     await Settings.setMaxSessionTimeout.call(this);
   });

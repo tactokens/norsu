@@ -6,8 +6,8 @@ import { cbToPromise, setupDnode, transformMethods } from './lib/dnode-util';
 import log from 'loglevel';
 import { initApp } from './ui/index';
 
-const WAVESKEEPER_DEBUG = process.env.NODE_ENV !== 'production';
-log.setDefaultLevel(WAVESKEEPER_DEBUG ? 'debug' : 'warn');
+const TACKEEPER_DEBUG = process.env.NODE_ENV !== 'production';
+log.setDefaultLevel(TACKEEPER_DEBUG ? 'debug' : 'warn');
 
 startUi().catch(log.error);
 
@@ -41,7 +41,7 @@ async function startUi() {
   });
 
   // global access to service on debug
-  if (WAVESKEEPER_DEBUG) {
+  if (TACKEEPER_DEBUG) {
     global.background = background;
     console.log('inited');
   }
@@ -51,7 +51,7 @@ async function startUi() {
     await background.closeNotificationWindow();
   }
 
-  if (WAVESKEEPER_DEBUG) {
+  if (TACKEEPER_DEBUG) {
     console.log('closed windows');
   }
   // Initialize app

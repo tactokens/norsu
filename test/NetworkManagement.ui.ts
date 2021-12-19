@@ -69,7 +69,7 @@ describe('Network management', function () {
         await CreateNewAccount.importAccount.call(
           this,
           'rich',
-          'waves private node seed with waves tokens'
+          'tac private node seed with tac tokens'
         );
         await this.driver
           .wait(
@@ -111,7 +111,7 @@ describe('Network management', function () {
     });
 
     describe('Custom', function () {
-      const validNodeUrl = 'https://nodes.wavesnodes.com';
+      const validNodeUrl = 'https://nodes.tacnodes.com';
       const invalidNodeUrl = 'https://nodes.invalid.com';
       const customNetwork = 'Custom';
 

@@ -3,7 +3,7 @@ import cn from 'classnames';
 import * as React from 'react';
 import { Trans } from 'react-i18next';
 import { Button, Modal } from '../ui';
-import * as wavesKeeperLock from '../../assets/img/waves-keeper-lock.svg';
+import * as norsuLock from '../../assets/img/tac-keeper-lock.svg';
 import { FeatureUpdateInfo } from './FeatureUpdateInfo';
 import { connect } from 'react-redux';
 import { setUiState } from '../../actions';
@@ -28,7 +28,7 @@ export const Import = connect((state: any) => ({
     <div className={styles.root}>
       <img
         className={styles.importIcon}
-        src={wavesKeeperLock}
+        src={norsuLock}
         alt=""
         width={220}
         height={200}

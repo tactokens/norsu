@@ -4,7 +4,7 @@ import { setCustomCode, setCustomMatcher, setCustomNode } from '../../actions';
 import { Trans } from 'react-i18next';
 import { Button, BUTTON_TYPE, Copy, Error, Input, Modal } from '../ui';
 import * as styles from './styles/settings.styl';
-import { getMatcherPublicKey, getNetworkByte } from 'ui/utils/waves';
+import { getMatcherPublicKey, getNetworkByte } from 'ui/utils/tac';
 
 class NetworksSettingsComponent extends React.PureComponent {
   readonly props;

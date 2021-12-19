@@ -19,8 +19,8 @@
   "network_config": {
         "testnet": {
             "code": "$",
-            "server": "https://nodes-testnet.tactoken.io/",
-            "matcher": "https://explorer-testnet.tactoken.io/"
+            "server": "https://testnet.tactoken.io/",
+            "matcher": "https://testnet-explorer.tactoken.io/"
         },
         "mainnet": {
             "code": "%",
@@ -29,8 +29,8 @@
         },
         "stagenet": {
             "code": "S",
-            "server": " https://nodes-stagenet.tactoken.io/",
-            "matcher": "https://explorer-stagenet.tactoken.io/"
+            "server": " https://stagenet.tactoken.io/",
+            "matcher": "https://stagenet-explorer.tactoken.io/"
         },
         "custom": {
             "code": "",

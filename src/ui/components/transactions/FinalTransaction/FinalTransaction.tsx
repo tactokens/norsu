@@ -56,7 +56,7 @@ export class FinalTransaction extends React.PureComponent {
 
     const network = selectedAccount && selectedAccount.networkCode;
     const explorerUrls = new Map([
-      ['%', 'tactoken.io'],
+      ['%', 'nodes.tactoken.io'],
       ['$', 'testnet.tactoken.io'],
       ['S', 'stagenet.tactoken.io'],
       ['custom', 'tactoken.io/custom'],

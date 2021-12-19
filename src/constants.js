@@ -34,7 +34,7 @@ export const DEFAULT_CONFIG = {
       code: '$',
       // server: 'https://testnet.tactoken.io/',
       server: 'https://testnet.tactoken.io/',
-      matcher: 'https://explorer-testnet.tactoken.io/',
+      matcher: 'https://testnet-explorer.tactoken.io/',
     },
     mainnet: {
       code: '%',
@@ -43,8 +43,8 @@ export const DEFAULT_CONFIG = {
     },
     stagenet: {
       code: 'S',
-      server: 'https://nodes-stagenet.tactoken.io/',
-      matcher: 'https://explorer-stagenet.tactoken.io/',
+      server: 'https://stagenet.tactoken.io/',
+      matcher: 'https://stagenet-explorer.tactoken.io/',
     },
     custom: {
       code: '',

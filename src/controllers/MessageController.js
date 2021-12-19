@@ -3,14 +3,14 @@ import { MSG_STATUSES } from '../constants';
 import uuid from 'uuid/v4';
 import log from 'loglevel';
 import EventEmitter from 'events';
-import { getAdapterByType } from '@waves/signature-adapter';
-import { Asset, Money } from '@waves/data-entities';
-import { BigNumber } from '@waves/bignumber';
+import { getAdapterByType } from '@tac/signature-adapter';
+import { Asset, Money } from '@tac/data-entities';
+import { BigNumber } from '@tac/bignumber';
 import { networkByteFromAddress } from '../lib/cryptoUtil';
 import { ERRORS } from '../lib/KeeperError';
 import { PERMISSIONS } from './PermissionsController';
 import { calculateFeeFabric } from './CalculateFeeController';
-import { waves } from './wavesTransactionsController';
+import { tac } from './tacTransactionsController';
 import { clone } from 'ramda';
 import create from 'parse-json-bignumber';
 
@@ -30,7 +30,7 @@ export class MessageController extends EventEmitter {
 
     // Signing methods from WalletController
     this.signTx = options.signTx;
-    this.signWaves = options.signWaves;
+    this.signTac = options.signTac;
     this.auth = options.auth;
     this.signRequest = options.signRequest;
     this.signBytes = options.signBytes;
@@ -280,7 +280,7 @@ export class MessageController extends EventEmitter {
   }
 
   /**
-   * Removes unused messages in final states from previous versions of Waves Keeper
+   * Removes unused messages in final states from previous versions of Tac Keeper
    */
   clearUnusedMessages() {
     const unusedStatuses = [
@@ -470,9 +470,9 @@ export class MessageController extends EventEmitter {
         );
         signedData = message.data.isRequest ? signedData.signature : signedData;
         break;
-      case 'wavesAuth':
-        signedData = await this.signWaves(
-          'signWavesAuth',
+      case 'tacAuth':
+        signedData = await this.signTac(
+          'signTacAuth',
           message.data,
           message.account.address,
           message.account.network
@@ -486,7 +486,7 @@ export class MessageController extends EventEmitter {
         );
         break;
       case 'customData':
-        signedData = await this.signWaves(
+        signedData = await this.signTac(
           'signCustomData',
           message.data,
           message.account.address,
@@ -552,16 +552,16 @@ export class MessageController extends EventEmitter {
   /**
    * Calculates hash of message data. It is TX id for transactions. Also used for auth and requests. Throws if data is invalid
    * @param {object} data - data field from message
-   * @param {object} account - Waves Keeper account
+   * @param {object} account - Tac Keeper account
    * @returns {Promise<{ id, bytes }>}
    */
   async _getMessageDataHash(data, account) {
-    if (data && data.type === 'wavesAuth') {
-      return waves.parseWavesAuth(data);
+    if (data && data.type === 'tacAuth') {
+      return tac.parseTacAuth(data);
     }
 
     if (data && data.type === 'customData') {
-      return waves.parseCustomData(data);
+      return tac.parseCustomData(data);
     }
     let signableData = await this._transformData({ ...data.data });
 
@@ -605,7 +605,7 @@ export class MessageController extends EventEmitter {
       (message.data.data.fee || message.data.data.matcherFee);
 
     switch (message.type) {
-      case 'wavesAuth':
+      case 'tacAuth':
         result.data = message.data;
         result.data.publicKey = message.data.publicKey =
           message.data.publicKey || message.account.publicKey;
@@ -630,7 +630,7 @@ export class MessageController extends EventEmitter {
           isRequest: message.data.isRequest,
           data: {
             data: message.data.data,
-            prefix: 'WavesWalletAuthentication',
+            prefix: 'TacWalletAuthentication',
             host:
               message.data.host || new URL('https://' + message.origin).host,
             name: message.data.name,
@@ -777,7 +777,7 @@ export class MessageController extends EventEmitter {
     );
     const fee = {
       coins: (await this.getFee(adapter, signableData)).toString(),
-      assetId: 'WAVES',
+      assetId: 'TAC',
     };
     return {
       fee,
@@ -788,7 +788,7 @@ export class MessageController extends EventEmitter {
   _prepareTx(txParams, account) {
     const defaultFee = Money.fromCoins(
       0,
-      new Asset(this.assetInfoController.getWavesAsset())
+      new Asset(this.assetInfoController.getTacAsset())
     ).toJSON();
 
     const txDefaults = {
@@ -804,7 +804,7 @@ export class MessageController extends EventEmitter {
   async _prepareOrder(orderParams, account) {
     const defaultFee = Money.fromCoins(
       0,
-      new Asset(this.assetInfoController.getWavesAsset())
+      new Asset(this.assetInfoController.getTacAsset())
     );
 
     const orderDefaults = {

@@ -9,8 +9,8 @@ import {
 } from './utils/constants';
 
 const ACCOUNTS = {
-  RICH: { NAME: 'rich', SEED: 'waves private node seed with waves tokens' },
-  POOR: { NAME: 'poor', SEED: 'waves private node seed without waves tokens' },
+  RICH: { NAME: 'rich', SEED: 'tac private node seed with tac tokens' },
+  POOR: { NAME: 'poor', SEED: 'tac private node seed without tac tokens' },
 };
 
 describe('Account management', function () {
@@ -90,7 +90,7 @@ describe('Account management', function () {
 
     it('Updating account balances on import');
 
-    it('The balance reflects the leased WAVES');
+    it('The balance reflects the leased TAC');
 
     it('Copying the address of the active account on the accounts screen');
 

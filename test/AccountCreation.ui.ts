@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import { clear } from './utils';
 import { App, Settings, Network, CreateNewAccount } from './utils/actions';
 import { DEFAULT_ANIMATION_DELAY, DEFAULT_PASSWORD } from './utils/constants';
-import { seedUtils } from '@waves/waves-transactions';
+import { seedUtils } from '@tac/tac-transactions';
 
 describe('Account creation', function () {
   this.timeout(60 * 1000);

@@ -22,8 +22,8 @@ import packageTx from './Package';
 import unknown from './Unknown';
 import customData from './CustomData';
 import updateAssetInfo from './UpdateAssetInfo';
-import wavesAuth from './WavesAuth';
-import { Money } from '@waves/data-entities';
+import tacAuth from './TacAuth';
+import { Money } from '@tac/data-entities';
 
 interface Message {
   card: ComponentType<{
@@ -80,7 +80,7 @@ const MESSAGES: Message[] = [
   packageTx,
   customData,
   updateAssetInfo,
-  wavesAuth,
+  tacAuth,
 ];
 
 export { FinalTransaction } from './FinalTransaction';

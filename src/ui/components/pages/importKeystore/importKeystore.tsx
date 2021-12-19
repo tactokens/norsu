@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
-import { seedUtils } from '@waves/waves-transactions';
+import { seedUtils } from '@tac/tac-transactions';
 import { ImportKeystoreChooseFile } from './chooseFile';
 import {
   ImportKeystoreChooseAccounts,

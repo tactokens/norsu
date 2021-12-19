@@ -36,7 +36,7 @@ describe('Signature', function () {
     await CreateNewAccount.importAccount.call(
       this,
       'rich',
-      'waves private node seed with waves tokens'
+      'tac private node seed with tac tokens'
     );
     await Settings.setMaxSessionTimeout.call(this);
 
@@ -163,7 +163,7 @@ describe('Signature', function () {
       }
       await this.driver.executeScript(() => {
         // @ts-ignore
-        WavesKeeper.initialPromise.then(api => {
+        Norsu.initialPromise.then(api => {
           api.publicState();
         });
       });
@@ -214,7 +214,7 @@ describe('Signature', function () {
 
       await this.driver.executeScript(() => {
         // @ts-ignore
-        WavesKeeper.initialPromise.then(api => {
+        Norsu.initialPromise.then(api => {
           api.auth({ data: 'generated auth data' });
         });
       });
@@ -233,7 +233,7 @@ describe('Signature', function () {
 
       await this.driver.executeScript(tx => {
         // @ts-ignore
-        WavesKeeper.initialPromise.then(api => {
+        Norsu.initialPromise.then(api => {
           api.signTransaction(tx);
         });
       }, tx);
@@ -270,7 +270,7 @@ describe('Signature', function () {
       // TODO this checks should be into unittests
       it('Address');
       it('Alias');
-      it('Waves / asset / smart asset');
+      it('Tac / asset / smart asset');
       it('Attachment');
       it('Transfers to Gateways');
     });
@@ -409,7 +409,7 @@ describe('Signature', function () {
       describe('Payment', function () {
         it('Zero count');
         it('Maximum count');
-        it('Waves / asset / smart asset');
+        it('Tac / asset / smart asset');
       });
     });
 
@@ -421,13 +421,13 @@ describe('Signature', function () {
   describe('Order', function () {
     const createOrder = tx => {
       // @ts-ignore
-      WavesKeeper.initialPromise.then(api => {
+      Norsu.initialPromise.then(api => {
         api.signOrder(tx);
       });
     };
     const cancelOrder = tx => {
       // @ts-ignore
-      WavesKeeper.initialPromise.then(api => {
+      Norsu.initialPromise.then(api => {
         api.signCancelOrder(tx);
       });
     };
@@ -475,7 +475,7 @@ describe('Signature', function () {
       await this.driver.executeScript(
         (tx, name) => {
           // @ts-ignore
-          WavesKeeper.initialPromise.then(api => {
+          Norsu.initialPromise.then(api => {
             api.signTransactionPackage(tx, name);
           });
         },
@@ -507,7 +507,7 @@ describe('Signature', function () {
 
       await this.driver.executeScript(data => {
         // @ts-ignore
-        WavesKeeper.initialPromise.then(api => {
+        Norsu.initialPromise.then(api => {
           api.signCustomData(data);
         });
       }, data);

@@ -29,13 +29,13 @@ export class Welcome extends React.Component<IWelcomeProps> {
         <div className="basic500 body3">
           <div>
             <Trans i18nKey="welcome.info">
-              Waves Keeper — is the safest way to interact with third-party web
-              resources with Waves-integrated functionality or DApps.
+              Tac Keeper — is the safest way to interact with third-party web
+              resources with Tac-integrated functionality or DApps.
             </Trans>
           </div>
           <div>
             <Trans i18nKey="welcome.info2">
-              Using Waves Keeper, you can sign transactions and remain safe from
+              Using Tac Keeper, you can sign transactions and remain safe from
               malicious sites.
             </Trans>
           </div>

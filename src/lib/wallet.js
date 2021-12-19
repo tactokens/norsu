@@ -1,7 +1,7 @@
-import { getAdapterByType } from '@waves/signature-adapter';
-import { libs as transactionsLibs } from '@waves/waves-transactions';
-import { waves } from '../controllers/wavesTransactionsController';
-import { BigNumber } from '@waves/bignumber';
+import { getAdapterByType } from '@tac/signature-adapter';
+import { libs as transactionsLibs } from '@tac/tac-transactions';
+import { tac } from '../controllers/tacTransactionsController';
+import { BigNumber } from '@tac/bignumber';
 import create from 'parse-json-bignumber';
 
 const { messageEncrypt, messageDecrypt, sharedKey, base58Encode } =
@@ -80,13 +80,13 @@ export class Wallet {
   }
 
   async getKEK(publicKey, prefix) {
-    prefix = (prefix || '') + 'waves';
+    prefix = (prefix || '') + 'tac';
     const privateKey = await this._adapter.getPrivateKey();
     return base58Encode(sharedKey(privateKey, publicKey, prefix));
   }
 
-  async signWaves(type, data) {
-    return waves[type](data, this.user);
+  async signTac(type, data) {
+    return tac[type](data, this.user);
   }
 
   async signTx(tx) {

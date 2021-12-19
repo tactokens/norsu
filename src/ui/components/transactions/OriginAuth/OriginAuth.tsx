@@ -13,7 +13,7 @@ import {
 } from 'ui/components/ui';
 import { ExtendedPermission } from 'ui/components/permissions';
 import { connect } from 'react-redux';
-import { BigNumber } from '@waves/bignumber';
+import { BigNumber } from '@tac/bignumber';
 import { TxHeader } from '../BaseTransaction';
 import { SignClass } from '../SignClass';
 

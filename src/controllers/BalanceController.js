@@ -1,5 +1,5 @@
 import ObservableStore from 'obs-store';
-import { BigNumber } from '@waves/bignumber';
+import { BigNumber } from '@tac/bignumber';
 
 export class BalanceController {
   constructor(options = {}) {
@@ -54,12 +54,12 @@ export class BalanceController {
           const address = account.address;
           const isActiveAddress = address === activeAccount.address;
 
-          const wavesBalances = await this.getByUrl(
+          const tacBalances = await this.getByUrl(
             `addresses/balance/details/${address}`
           );
 
-          const available = new BigNumber(wavesBalances.available);
-          const regular = new BigNumber(wavesBalances.regular);
+          const available = new BigNumber(tacBalances.available);
+          const regular = new BigNumber(tacBalances.regular);
           const leasedOut = regular.sub(available);
 
           return [

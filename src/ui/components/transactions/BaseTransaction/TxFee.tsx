@@ -2,16 +2,16 @@ import { Balance, Select } from '../../ui';
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { BalanceAssets } from './TxInfo';
-import { Asset, Money } from '@waves/data-entities';
-import { BigNumber } from '@waves/bignumber';
+import { Asset, Money } from '@tac/data-entities';
+import { BigNumber } from '@tac/bignumber';
 import { DEFAULT_FEE_CONFIG } from '../../../../constants';
 import { updateTransactionFee } from '../../../actions';
 import { getMoney, IMoneyLike } from '../../../utils/converters';
 import { getFee } from './parseTx';
-import { TRANSACTION_TYPE } from '@waves/ts-types';
+import { TRANSACTION_TYPE } from '@tac/ts-types';
 import { omit } from 'ramda';
 
-const WAVES_MIN_FEE = DEFAULT_FEE_CONFIG.calculate_fee_rules.default.fee;
+const TAC_MIN_FEE = DEFAULT_FEE_CONFIG.calculate_fee_rules.default.fee;
 
 interface Props {
   isEditable: boolean;
@@ -38,7 +38,7 @@ export const TxFee = connect(
     const fee = getMoney(getFee({ ...message?.data?.data }), assets);
     const initialFee = getMoney(message?.data?.data?.initialFee, assets);
 
-    const minSponsorBalance: Money = convertFee(initialFee, assets['WAVES']);
+    const minSponsorBalance: Money = convertFee(initialFee, assets['TAC']);
 
     const sponsoredBalance = Object.entries(
       (ownProps.sponsoredBalance as BalanceAssets) || {}
@@ -57,7 +57,7 @@ export const TxFee = connect(
       [TRANSACTION_TYPE.TRANSFER, TRANSACTION_TYPE.INVOKE_SCRIPT].includes(
         message.data.type
       ) &&
-      (fee.asset.displayName === 'WAVES' || !!fee.asset.minSponsoredFee);
+      (fee.asset.displayName === 'TAC' || !!fee.asset.minSponsoredFee);
 
     return {
       message,
@@ -91,11 +91,11 @@ export const TxFee = connect(
   }
 
   let options: FeeOption[] = [];
-  if ('WAVES' in sponsoredBalance || initialFee.asset.id === 'WAVES') {
-    options.push(getOption('WAVES'));
-    sponsoredBalance = omit(['WAVES'], sponsoredBalance);
+  if ('TAC' in sponsoredBalance || initialFee.asset.id === 'TAC') {
+    options.push(getOption('TAC'));
+    sponsoredBalance = omit(['TAC'], sponsoredBalance);
   }
-  if (initialFee.asset.id !== 'WAVES') {
+  if (initialFee.asset.id !== 'TAC') {
     options.push(getOption(initialFee.asset.id));
     sponsoredBalance = omit([initialFee.asset.id], sponsoredBalance);
   }
@@ -127,9 +127,9 @@ export const TxFee = connect(
 });
 
 function convertFee(from: Money, toAsset: Asset): Money {
-  const isWaves = (assetId: string) => assetId === 'WAVES';
+  const isTac = (assetId: string) => assetId === 'TAC';
   const minSponsoredFee = (asset: Asset) =>
-    !isWaves(asset.id) ? asset.minSponsoredFee : WAVES_MIN_FEE;
+    !isTac(asset.id) ? asset.minSponsoredFee : TAC_MIN_FEE;
   return new Money(
     new BigNumber(from.toCoins())
       .mul(new BigNumber(minSponsoredFee(toAsset)))

@@ -38,7 +38,7 @@ describe('Settings', function () {
     await CreateNewAccount.importAccount.call(
       this,
       'rich',
-      'waves private node seed with waves tokens'
+      'tac private node seed with tac tokens'
     );
     await this.driver
       .wait(
@@ -341,7 +341,7 @@ describe('Settings', function () {
         // this requests permission first
         const permissionRequest = () => {
           // @ts-ignore
-          WavesKeeper.initialPromise.then(api => {
+          Norsu.initialPromise.then(api => {
             api.publicState().then(
               resolved => {
                 // @ts-ignore

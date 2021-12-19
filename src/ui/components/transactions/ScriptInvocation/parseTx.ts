@@ -1,5 +1,5 @@
-import { SIGN_TYPE } from '@waves/signature-adapter';
-import { BigNumber } from '@waves/bignumber';
+import { SIGN_TYPE } from '@tac/signature-adapter';
+import { BigNumber } from '@tac/bignumber';
 import { IMoneyLike } from 'ui/utils/converters';
 
 export const messageType = 'script_invocation';
@@ -16,15 +16,15 @@ export function getTransferAmount(amount, assetId) {
 
 export function getAssetsId(tx): Array<string> {
   const feeAssetId =
-    tx.fee && tx.fee.assetId ? tx.fee.assetId : tx.feeAssetId || 'WAVES';
+    tx.fee && tx.fee.assetId ? tx.fee.assetId : tx.feeAssetId || 'TAC';
   const amountAssetId = (tx.payment || []).map(item => {
     switch (typeof item) {
       case 'string':
-        return 'WAVES';
+        return 'TAC';
       case 'number':
-        return 'WAVES';
+        return 'TAC';
       case 'object':
-        return item && item.assetId ? item.assetId : 'WAVES';
+        return item && item.assetId ? item.assetId : 'TAC';
     }
   });
 
@@ -51,7 +51,7 @@ export function getAmounts(tx) {
         coins = coins.add(parse);
       }
     }
-    const assetId = item.assetId || 'WAVES';
+    const assetId = item.assetId || 'TAC';
 
     amounts.push({ coins, tokens, assetId });
   });

@@ -11,7 +11,7 @@ import {
   setUiState,
 } from '../../actions';
 import { PAGES } from '../../pageConfig';
-import { Asset, Money } from '@waves/data-entities';
+import { Asset, Money } from '@tac/data-entities';
 import { Modal } from '../ui';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import cn from 'classnames';
@@ -245,14 +245,14 @@ class AssetsComponent extends React.Component {
   }
 
   static getDerivedStateFromProps(props) {
-    const asset = props.assets['WAVES'];
+    const asset = props.assets['TAC'];
 
     if (!props.activeAccount) {
       return { loading: true };
     }
 
     if (!asset) {
-      props.getAsset('WAVES');
+      props.getAsset('TAC');
       return { balances: {}, lease: {}, loading: false };
     }
 

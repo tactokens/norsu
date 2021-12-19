@@ -7,7 +7,7 @@ import debounce from 'debounce';
 import asStream from 'obs-store/lib/asStream';
 import extension from 'extensionizer';
 import { ERRORS } from './lib/KeeperError';
-import { MSG_STATUSES, WAVESKEEPER_DEBUG } from './constants';
+import { MSG_STATUSES, TACKEEPER_DEBUG } from './constants';
 import { createStreamSink } from './lib/createStreamSink';
 import { getFirstLangCode } from './lib/get-first-lang-code';
 import PortStream from './lib/port-stream.js';
@@ -33,13 +33,13 @@ import {
 } from './controllers';
 import { setupDnode } from './lib/dnode-util';
 import { WindowManager } from './lib/WindowManger';
-import '@waves/waves-transactions';
-import { getAdapterByType } from '@waves/signature-adapter';
-import { waves } from './controllers/wavesTransactionsController';
+import '@tac/tac-transactions';
+import { getAdapterByType } from '@tac/signature-adapter';
+import { tac } from './controllers/tacTransactionsController';
 
 const version = extension.runtime.getManifest().version;
 const isEdge = window.navigator.userAgent.indexOf('Edge') > -1;
-log.setDefaultLevel(WAVESKEEPER_DEBUG ? 'debug' : 'warn');
+log.setDefaultLevel(TACKEEPER_DEBUG ? 'debug' : 'warn');
 
 const bgPromise = setupBackgroundService().catch(e => log.error(e));
 
@@ -73,7 +73,7 @@ async function setupBackgroundService() {
   });
 
   // global access to service on debug
-  if (WAVESKEEPER_DEBUG) {
+  if (TACKEEPER_DEBUG) {
     global.background = backgroundService;
   }
 
@@ -289,7 +289,7 @@ class BackgroundService extends EventEmitter {
     this.messageController = new MessageController({
       initState: initState.MessageController,
       signTx: this.walletController.signTx.bind(this.walletController),
-      signWaves: this.walletController.signWaves.bind(this.walletController),
+      signTac: this.walletController.signTac.bind(this.walletController),
       auth: this.walletController.auth.bind(this.walletController),
       signRequest: this.walletController.signRequest.bind(
         this.walletController
@@ -643,12 +643,12 @@ class BackgroundService extends EventEmitter {
       auth: async (data, options) => {
         return await newMessage(data, 'auth', options, false);
       },
-      wavesAuth: async (data, options) => {
+      tacAuth: async (data, options) => {
         const publicKey = data && data.publicKey;
         const timestamp = (data && data.timestamp) || Date.now();
         return await newMessage(
           { publicKey, timestamp },
-          'wavesAuth',
+          'tacAuth',
           options,
           false
         );
@@ -660,7 +660,7 @@ class BackgroundService extends EventEmitter {
         return await newMessage(data, 'customData', options, false);
       },
       verifyCustomData: async data => {
-        return waves.verifyCustomData(data);
+        return tac.verifyCustomData(data);
       },
       notification: async data => {
         const state = this.getState();

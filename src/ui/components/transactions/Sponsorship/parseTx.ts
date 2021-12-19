@@ -1,4 +1,4 @@
-import { SIGN_TYPE } from '@waves/signature-adapter';
+import { SIGN_TYPE } from '@tac/signature-adapter';
 
 export const messageType = 'sponsorship';
 export const txType = 'transaction';
@@ -9,9 +9,9 @@ export const SPONSOR_MODE = {
 
 export function getAssetsId(tx): Array<string> {
   const feeAssetId =
-    tx.fee && tx.fee.assetId ? tx.fee.assetId : tx.feeAssetId || 'WAVES';
+    tx.fee && tx.fee.assetId ? tx.fee.assetId : tx.feeAssetId || 'TAC';
   const sponsoredAssetId =
-    (tx.minSponsoredAssetFee && tx.minSponsoredAssetFee.assetId) || 'WAVES';
+    (tx.minSponsoredAssetFee && tx.minSponsoredAssetFee.assetId) || 'TAC';
   return [feeAssetId, sponsoredAssetId];
 }
 
@@ -25,7 +25,7 @@ export function getAssetFee(tx) {
 }
 
 export function getAmount() {
-  return { coins: 0, assetId: 'WAVES' };
+  return { coins: 0, assetId: 'TAC' };
 }
 
 export function getAmountSign() {

@@ -12,7 +12,7 @@ import {
 import cn from 'classnames';
 import { Loader, Modal } from 'ui/components/ui';
 import { List, OriginSettings, Tabs } from './components';
-import { BigNumber } from '@waves/bignumber';
+import { BigNumber } from '@tac/bignumber';
 
 class PermissionsSettingsComponent extends React.PureComponent {
   readonly state = {

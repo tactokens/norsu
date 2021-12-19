@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Trans } from 'react-i18next';
 import * as styles from './networkSettings.styl';
-import { getMatcherPublicKey, getNetworkByte } from 'ui/utils/waves';
+import { getMatcherPublicKey, getNetworkByte } from 'ui/utils/tac';
 import { Button, BUTTON_TYPE, Error, Input } from 'ui/components/ui';
 
 const key = key => `bottom.${key}`;

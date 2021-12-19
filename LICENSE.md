@@ -21,7 +21,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-Forked and edited from https://github.com/wavesplatform/waves-keeper
+Forked and edited from https://github.com/tacplatform/tac-keeper
 
 MIT License
 

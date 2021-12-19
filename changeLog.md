@@ -1,8 +1,8 @@
-## Waves Keeper
+## Tac Keeper
 
 #### version 1.1.12
 
-- Fix links to waves.exchange
+- Fix links to tac.exchange
 
 #### version 1.1.11
 
@@ -21,7 +21,7 @@
 
 #### version 1.1.9
 
-- WavesKeeper proxy
+- Norsu proxy
 - Update fixed libs
 
 #### version 1.1.8
@@ -60,7 +60,7 @@
 
 #### version 1.1.3
 
-- Fix bug with attachments from waves lib
+- Fix bug with attachments from tac lib
 
 #### version 1.1.2
 

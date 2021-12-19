@@ -18,15 +18,15 @@ setupInpageApi().catch(e => log.error(e));
 async function setupInpageApi() {
   let cbs = {};
   let args = {};
-  const wavesAppDef = createDeffer();
-  const wavesApp = {};
-  let wavesApi = {
-    initialPromise: wavesAppDef.promise,
+  const tacAppDef = createDeffer();
+  const tacApp = {};
+  let tacApi = {
+    initialPromise: tacAppDef.promise,
   };
   const proxyApi = {
     get(target, prop) {
-      if (wavesApi[prop]) {
-        return wavesApi[prop];
+      if (tacApi[prop]) {
+        return tacApi[prop];
       }
 
       if (!cbs[prop] && prop !== 'on') {
@@ -57,11 +57,11 @@ async function setupInpageApi() {
     },
   };
 
-  global.WavesKeeper = global.Waves = new Proxy(wavesApp, proxyApi);
+  global.Norsu = global.Tac = new Proxy(tacApp, proxyApi);
 
   const connectionStream = new LocalMessageDuplexStream({
-    name: 'waves_keeper_page',
-    target: 'waves_keeper_content',
+    name: 'tac_keeper_page',
+    target: 'tac_keeper_content',
   });
 
   const eventEmitter = new EventEmitter();
@@ -89,9 +89,9 @@ async function setupInpageApi() {
 
   args = [];
   cbs = {};
-  Object.assign(wavesApi, inpageApi);
-  wavesAppDef.resolve(wavesApi);
-  global.WavesKeeper = global.Waves = wavesApi;
+  Object.assign(tacApi, inpageApi);
+  tacAppDef.resolve(tacApi);
+  global.Norsu = global.Tac = tacApi;
   setupClickInterceptor(inpageApi);
 }
 
@@ -216,7 +216,7 @@ function processPaymentAPILink({ type, hash }, inpageApi) {
             tokens: apiData.amount,
           },
           fee: {
-            assetId: 'WAVES',
+            assetId: 'TAC',
             tokens: '0.00100000',
           },
           recipient: apiData.recipient,

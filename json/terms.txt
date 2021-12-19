@@ -270,8 +270,8 @@ NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-The Norsu software is derived from the Waves Keeper software, which is licend under the MIT license.
-The Waves Keeper license is hereby included:
+The Norsu software is derived from the Tac Keeper software, which is licend under the MIT license.
+The Tac Keeper license is hereby included:
 
 -- start inclusion --
 MIT License

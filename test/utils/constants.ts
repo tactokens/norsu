@@ -1,16 +1,16 @@
 export const WHITELIST = [
   'swop.fi',
-  'waves.exchange',
-  'testnet.waves.exchange',
+  'tac.exchange',
+  'testnet.tac.exchange',
   'oracles.tactoken.io',
   'tokenrating.tactoken.io',
-  'waves-dapp.com',
-  'waves-ide.com',
-  'wavesducks.com',
+  'tac-dapp.com',
+  'tac-ide.com',
+  'tacducks.com',
   'vires.finance',
 ];
 
-export const CUSTOMLIST = ['waves.tech', 'docs.waves.tech'];
+export const CUSTOMLIST = ['tac.tech', 'docs.tac.tech'];
 
 export const DEFAULT_PASSWORD = 'default-password';
 

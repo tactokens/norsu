@@ -1,5 +1,5 @@
-import { SIGN_TYPE } from '@waves/signature-adapter';
-import { BigNumber } from '@waves/bignumber';
+import { SIGN_TYPE } from '@tac/signature-adapter';
+import { BigNumber } from '@tac/bignumber';
 
 export const messageType = 'mass_transfer';
 export const txType = 'transaction';
@@ -15,11 +15,11 @@ export function getTransferAmount(amount, assetId) {
 
 export function getAssetsId(tx): Array<string> {
   const feeAssetId =
-    tx.fee && tx.fee.assetId ? tx.fee.assetId : tx.feeAssetId || 'WAVES';
+    tx.fee && tx.fee.assetId ? tx.fee.assetId : tx.feeAssetId || 'TAC';
   const amountAssetId =
     tx.totalAmount && tx.totalAmount.assetId
       ? tx.totalAmount.assetId
-      : tx.assetId || 'WAVES';
+      : tx.assetId || 'TAC';
 
   if (feeAssetId === amountAssetId) {
     return [amountAssetId];
@@ -34,7 +34,7 @@ export function getAmount(tx) {
   const assetId =
     tx.totalAmount && tx.totalAmount.assetId
       ? tx.totalAmount.assetId
-      : tx.assetId || 'WAVES';
+      : tx.assetId || 'TAC';
   let tokens = new BigNumber(0);
   let coins = new BigNumber(0);
 

@@ -1,11 +1,11 @@
-import { SIGN_TYPE } from '@waves/signature-adapter';
+import { SIGN_TYPE } from '@tac/signature-adapter';
 
 export const messageType = 'reissue';
 export const txType = 'transaction';
 
 export function getAssetsId(tx): Array<string> {
   const feeAssetId =
-    tx.fee && tx.fee.assetId ? tx.fee.assetId : tx.feeAssetId || 'WAVES';
+    tx.fee && tx.fee.assetId ? tx.fee.assetId : tx.feeAssetId || 'TAC';
   const amountAssetId =
     tx.quantity && tx.quantity.assetId ? tx.quantity.assetId : tx.assetId;
 

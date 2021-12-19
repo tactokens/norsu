@@ -3,7 +3,7 @@ import { Trans } from 'react-i18next';
 import cn from 'classnames';
 import * as styles from './settings.styl';
 import { Button, BUTTON_TYPE, Input, Select } from 'ui/components/ui';
-import { BigNumber } from '@waves/bignumber';
+import { BigNumber } from '@tac/bignumber';
 
 const CONFIG = {
   list: [
@@ -254,7 +254,7 @@ class OriginSettingsComponent extends React.PureComponent<IProps, IState> {
               value={value}
               placeholder={0}
             />
-            <div className={styles.waves}>Waves</div>
+            <div className={styles.tac}>Tac</div>
           </div>
 
           <div className="flex margin-main-big margin-main-big-top">

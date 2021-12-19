@@ -1,18 +1,18 @@
-import { SIGN_TYPE } from '@waves/signature-adapter';
+import { SIGN_TYPE } from '@tac/signature-adapter';
 
 export const messageType = 'cancel-order';
 export const txType = 'cancelOrder';
 
 export function getAssetsId(tx): Array<string> {
-  return ['WAVES'];
+  return ['TAC'];
 }
 
 export function getFee(tx) {
-  return { coins: 0, assetId: 'WAVES' };
+  return { coins: 0, assetId: 'TAC' };
 }
 
 export function getAmount(tx = null) {
-  return { coins: 0, assetId: 'WAVES' };
+  return { coins: 0, assetId: 'TAC' };
 }
 
 export function getAmountSign() {

@@ -1,4 +1,4 @@
-import { seedUtils } from '@waves/waves-transactions';
+import { seedUtils } from '@tac/tac-transactions';
 
 export function encrypt(object, password) {
   const jsonObj = JSON.stringify(object);

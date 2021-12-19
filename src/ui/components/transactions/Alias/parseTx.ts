@@ -1,17 +1,17 @@
-import { SIGN_TYPE } from '@waves/signature-adapter';
+import { SIGN_TYPE } from '@tac/signature-adapter';
 
 export const messageType = 'create-alias';
 export const txType = 'transaction';
 
 export function getAssetsId(tx): Array<string> {
-  const feeAssetId = tx.fee && tx.fee.assetId ? tx.fee.assetId : 'WAVES';
+  const feeAssetId = tx.fee && tx.fee.assetId ? tx.fee.assetId : 'TAC';
   return [feeAssetId];
 }
 
 export { getFee } from '../BaseTransaction/parseTx';
 
 export function getAmount() {
-  return { coins: 0, assetId: 'WAVES' };
+  return { coins: 0, assetId: 'TAC' };
 }
 
 export function getAmountSign() {

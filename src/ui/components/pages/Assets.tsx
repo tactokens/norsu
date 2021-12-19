@@ -16,7 +16,6 @@ import { Modal } from '../ui';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import cn from 'classnames';
 import { Intro } from './Intro';
-import { FeatureUpdateInfo } from './FeatureUpdateInfo';
 
 class AssetsComponent extends React.Component {
   props;
@@ -37,10 +36,6 @@ class AssetsComponent extends React.Component {
     event.preventDefault();
     this.props.setTab(PAGES.QR_CODE_SELECTED);
   };
-
-  dismissFeatureInfo = () =>
-    this.props.setUiState({ isFeatureUpdateShown: true });
-  exportToKeystore = () => this.props.setTab(PAGES.EXPORT_ACCOUNTS);
 
   render() {
     if (this.state.loading) {
@@ -159,18 +154,6 @@ class AssetsComponent extends React.Component {
           </div>
         </Modal>
 
-        <Modal
-          animation={Modal.ANIMATION.FLASH}
-          showModal={this.props.showUpdateInfo}
-        >
-          <FeatureUpdateInfo
-            onClose={this.dismissFeatureInfo}
-            onSubmit={() => {
-              this.dismissFeatureInfo();
-              this.exportToKeystore();
-            }}
-          />
-        </Modal>
       </div>
     );
   }
@@ -295,9 +278,7 @@ const mapStateToProps = function (store: any) {
     accounts: store.accounts,
     balances: store.balances,
     assets: store.assets,
-    notifications: store.localState.notifications,
-    showUpdateInfo:
-      !store.uiState.isFeatureUpdateShown && !!store.accounts.length,
+    notifications: store.localState.notifications
   };
 };
 

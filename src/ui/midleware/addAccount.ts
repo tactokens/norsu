@@ -22,7 +22,6 @@ export const addAccount = store => next => action => {
         () => {
           store.dispatch(addUserReceive());
           store.dispatch(setTab('assets'));
-          background.sendEvent('addWallet', { type: meta.type });
         },
         e => {
           store.dispatch(addUserReceive(e));
@@ -39,7 +38,6 @@ export const addAccount = store => next => action => {
       )
     ).then(() => {
       store.dispatch(setTab('assets'));
-      background.sendEvent('addWallet', { type: meta.type });
     });
   }
 

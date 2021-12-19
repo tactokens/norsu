@@ -21,7 +21,7 @@ class DeleteActiveAccountComponent extends React.Component {
         </h2>
         <div className="margin4 body1">
           <Trans i18nKey="deleteAccount.warn">
-            Deleting an account will lead to its irretrievable loss!
+            Do not delete an account without first ensuring you have a backup of the seed phrase, a keystore file, or private key that created it.
           </Trans>
         </div>
         <div>

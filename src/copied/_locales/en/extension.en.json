@@ -84,12 +84,12 @@
   "deleteAccount": {
     "attention": "Attention!",
     "delete": "Delete account",
-    "warn": "Deleting an account will lead to its irretrievable loss!"
+    "warn": "Do not delete an account without first ensuring you have a backup of the seed phrase, a keystore file, or private key that created it."
   },
   "deleteUser": {
     "attention": "Attention!",
     "delete": "Delete account",
-    "warn": "Deleting an account may lead to irretrievable loss of access to funds! Always make sure you have backed up your SEED."
+    "warn": "Do not delete an account without first ensuring you have a backup of the seed phrase, a keystore file, or private key that created it."
   },
   "exportKeystore": {
     "cancelBtn": "Cancel",
@@ -99,7 +99,7 @@
     "chooseAccountsTitle": "Export to Keystore file",
     "passwordError": "Incorrect password",
     "passwordLabel": "Password",
-    "passwordVerifyDesc": "Please enter your Keeper password to confirm that it's really you",
+    "passwordVerifyDesc": "Please enter your Norsu password to confirm that it's really you",
     "passwordVerifyImportantNote": "<attention>Attention:</attention> this password will also be used to encrypt the resulting file. If you forget it, you won't be able to restore your accounts.",
     "verifyBtn": "Verify"
   },
@@ -131,7 +131,7 @@
     "browse": "Browse...",
     "chooseAccountsTitle": "Choose accounts",
     "chooseAccountsDesc": "Select which accounts you want to import",
-    "chooseAccountsExistingAccountNote": "Already exists in Keeper as {{existingName}}",
+    "chooseAccountsExistingAccountNote": "Already exists in Norsu as {{existingName}}",
     "chooseAccountsImportBtn": "Import {{count}} account",
     "chooseAccountsImportBtn_plural": "Import {{count}} accounts",
     "chooseAccountsSkipBtn": "Skip",
@@ -155,7 +155,7 @@
   },
   "info": {
     "joinUs": "Join the TAC Community",
-    "keepUp": "Norsu is the safest way to interact with third-party web resources with TAC-integrated functionality or DApps.\n Using Norsu, you can sign transactions and remain safe from malicious sites."
+    "keepUp": "Norsu is the safest way to interact with third-party web resources with TAC-integrated functionality or DApps.\n\n Using Norsu, you can sign transactions and remain safe from malicious sites."
   },
   "langsSettings": {
     "confirm": "Confirm",
@@ -336,7 +336,7 @@
     "signButton": "Sign",
     "someError": "Something went wrong",
     "switchAccount": "Switch account",
-    "transactionApproved": "Your have approved send",
+    "transactionApproved": "You have approved send",
     "transactionConfirm": {
       "alias": "You have approved Alias creation.",
       "lease": "Your approved transaction",
@@ -365,7 +365,7 @@
     "transactionSendTransfer": "You have sent transfer",
     "understand": "I understand",
     "viewTransaction": "View transaction",
-    "tacAuthConfirmed": "Sign a tac auth request!"
+    "tacAuthConfirmed": "Sign a TAC auth request!"
   },
   "transactions": {
     "allowAccess": "Allow access",

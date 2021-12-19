@@ -4,24 +4,17 @@ import * as React from 'react';
 import { Trans } from 'react-i18next';
 import { Button, Modal } from '../ui';
 import * as norsuLock from '../../assets/img/tac-keeper-lock.svg';
-import { FeatureUpdateInfo } from './FeatureUpdateInfo';
 import { connect } from 'react-redux';
 import { setUiState } from '../../actions';
 import { AnyAction } from 'redux';
 import { PAGES } from '../../pageConfig';
 
 interface Props {
-  showUpdateInfo: boolean;
   setTab: (newTab: string) => void;
   dispatch: (action: AnyAction) => void;
 }
 
-export const Import = connect((state: any) => ({
-  showUpdateInfo:
-    !state.uiState.isFeatureUpdateShown && !!state.allNetworksAccounts.length,
-}))(function Import({ showUpdateInfo, setTab, dispatch }: Props) {
-  const dismissFeatureInfo = () =>
-    dispatch(setUiState({ isFeatureUpdateShown: true }));
+export const Import = connect((state: any) => ({ }))(function Import({ showUpdateInfo, setTab, dispatch }: Props) {
   const exportToKeystore = () => setTab(PAGES.EXPORT_ACCOUNTS);
 
   return (
@@ -74,15 +67,6 @@ export const Import = connect((state: any) => ({
         </div>
       </div>
 
-      <Modal animation={Modal.ANIMATION.FLASH} showModal={showUpdateInfo}>
-        <FeatureUpdateInfo
-          onClose={dismissFeatureInfo}
-          onSubmit={() => {
-            dismissFeatureInfo();
-            exportToKeystore();
-          }}
-        />
-      </Modal>
     </div>
   );
 });

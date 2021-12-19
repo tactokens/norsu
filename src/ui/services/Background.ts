@@ -245,13 +245,6 @@ class Background {
     return this.background.getUserList(type, from, to);
   }
 
-  async sendEvent(event: 'addWallet', properties: { type: string });
-  async sendEvent(event: 'click', properties: { id: string });
-  async sendEvent(event: string, properties: any = {}) {
-    await this.initPromise;
-    return this.background.sendEvent(event, properties);
-  }
-
   async _updateIdle() {
     const now = Date.now();
     clearTimeout(this._tmr);

@@ -43,25 +43,6 @@ log.setDefaultLevel(TACKEEPER_DEBUG ? 'debug' : 'warn');
 
 const bgPromise = setupBackgroundService().catch(e => log.error(e));
 
-extension.runtime.onInstalled.addListener(async details => {
-  const bgService = await bgPromise;
-  const prevUiState = bgService.uiStateController.getUiState();
-
-  bgService.uiStateController.setUiState({
-    ...prevUiState,
-    isFeatureUpdateShown:
-      details.reason === extension.runtime.OnInstalledReason.INSTALL ||
-      !!prevUiState.isFeatureUpdateShown,
-  });
-
-  if (details.reason === extension.runtime.OnInstalledReason.UPDATE) {
-    bgService.messageController.clearUnusedMessages();
-  }
-});
-
-const Adapter = getAdapterByType('seed');
-const adapter = new Adapter('test seed for get seed adapter info');
-
 async function setupBackgroundService() {
   // Background service init
   const localStore = new LocalStore();

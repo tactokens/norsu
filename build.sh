@@ -9,8 +9,26 @@
 
 # This way we can still import and use all changes to the @waves modules
 
+# First check that rename is installed
+REQUIRED_PKG="rename"
+PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
+echo "Checking for $REQUIRED_PKG: $PKG_OK"
+if [ "" = "$PKG_OK" ]; then
+  echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
+  sudo apt-get install $REQUIRED_PKG
+fi
+
+# Then check that node_modules has been deleted
+# We don't want to delete it for the developer, because they may not want that
+if [[ -d "node_modules" ]]
+then
+    echo "*** You must delete node_modules before installing ***"
+    exit 1
+fi
+
+# Then proceed with the install
 npm install
-mv node_modules/@waves node_modules/@tac
+mv ./node_modules/@waves ./node_modules/@tac
 cd ./node_modules/@tac
 
 # Rename all the Waves to TAC

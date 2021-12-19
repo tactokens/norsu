@@ -65,6 +65,7 @@ class ImportSeedComponent extends React.Component {
         </div>
 
         <form onSubmit={this.onSubmit}>
+
           <div className={'tag1 basic500 input-title'}>
             {/*{t('importSeed.newSeed')}*/}
             <Trans i18nKey="importSeed.newSeed">Wallet Seed</Trans>
@@ -88,7 +89,7 @@ class ImportSeedComponent extends React.Component {
 
           <Error show={!!this.state.showExistError} className={styles.error}>
             {/*{t('importSeed.existError')}*/}
-            <Trans i18nKey="importSeed.existError">Account already exist</Trans>
+            <Trans i18nKey="importSeed.existError">Account already exists</Trans>
           </Error>
 
           <div className={'tag1 basic500 input-title'}>
@@ -136,6 +137,7 @@ class ImportSeedComponent extends React.Component {
       this.props.networks.find(({ name }) => this.props.currentNetwork === name)
         .code ||
       '';
+    console.log("Found code is " + this.props.networks.find(({ name }) => this.props.currentNetwork === name).code);
     let seed = { address: '', phrase: '' };
 
     if (phrase.length >= 24) {

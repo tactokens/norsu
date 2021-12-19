@@ -32,7 +32,8 @@ export const DEFAULT_CONFIG = {
   NETWORK_CONFIG: {
     testnet: {
       code: '$',
-      server: 'https://nodes-testnet.tactoken.io/',
+      // server: 'https://testnet.tactoken.io/',
+      server: 'https://testnet.tactoken.io/',
       matcher: 'https://explorer-testnet.tactoken.io/',
     },
     mainnet: {

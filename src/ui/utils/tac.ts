@@ -19,7 +19,7 @@ export function getExplorerUrls(network: string, address: string) {
       break;
     case 'testnet':
       result.walletLink = 'https://wallet-testnet.tactoken.io/import/norsu';
-      result.activeAddressLink = `https://testnet.tactoken.io/address/${address}`;
+      result.activeAddressLink = `http://testnet.tactoken.io/address/${address}`;
       break;
     case 'stagenet':
       result.walletLink = 'https://wallet-stagenet.tactoken.io/import/norsu';

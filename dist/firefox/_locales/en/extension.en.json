@@ -26,7 +26,7 @@
     "id": "ID",
     "displayName": "Name",
     "ticker": "Ticker",
-    "precision": "Decimals points",
+    "precision": "Decimals",
     "quantity": "Total issued",
     "type": "Type",
     "reissuable": "Reissuable",
@@ -58,11 +58,11 @@
     "selectAccountNotification": "Active account changed",
     "assets": "Assets",
     "nfts": "NFTs",
-    "emptyAssets": "You don't have any asset yet",
+    "emptyAssets": "You don't have any assets yet",
     "notFoundAssets": "No assets were found for the specified filters",
-    "emptyNFTs": "You don't have any NFT yet",
+    "emptyNFTs": "You don't have any NFTs yet",
     "notFoundNFTs": "No NFTs were found for the specified filters",
-    "emptyHistory": "There's nothing to show yet",
+    "emptyHistory": "There is nothing to show yet",
     "notFoundHistory": "Nothing was found among the last {{ count }} transactions by the specified filters",
     "maxHistory": "Only the last {{ count }} transactions are displayed",
     "maxFiltersHistory": "Filters are applied only to the last {{ count }} transactions",
@@ -151,7 +151,7 @@
   "changeName": {
     "currentName": "Current account name",
     "error": "Name is required",
-    "errorInUse": "Name already exist",
+    "errorInUse": "Name already exists",
     "errorRequired": "Required name",
     "newName": "New account name",
     "save": "Save",
@@ -162,10 +162,10 @@
     "confirmPassword": "Confirm password",
     "create": "Save",
     "done": "Password changed",
-    "equalPassword": "Old password is equal new",
+    "equalPassword": "Old password is the same as new one",
     "errorShortNew": "Password is too short",
-    "errorShortOld": "Password can't be so short",
-    "errorWrongConfirm": "New passwords does not match",
+    "errorShortOld": "Password can't be that short",
+    "errorWrongConfirm": "New passwords do not match",
     "errorWrongOld": "Wrong password",
     "newPassword": "New password",
     "oldPassword": "Old password"
@@ -202,12 +202,12 @@
   "deleteAccount": {
     "attention": "Attention!",
     "delete": "Delete account",
-    "warn": "Deleting an account will lead to its irretrievable loss!"
+    "warn": "Do not delete an account if you have not backed up the seed phrase!"
   },
   "deleteUser": {
     "attention": "Attention!",
     "delete": "Delete account",
-    "warn": "Deleting an account may lead to irretrievable loss of access to funds! Always make sure you have backed up your SEED."
+    "warn": "Deleting an account may lead to irretrievable loss of access to funds! Always make sure you have backed up your seed phrase."
   },
   "exportKeystore": {
     "cancelBtn": "Cancel",
@@ -218,23 +218,23 @@
     "passwordError": "Incorrect password",
     "passwordLabel": "Password",
     "passwordVerifyDesc": "Please enter your Keeper password to confirm that it's really you",
-    "passwordVerifyImportantNote": "<attention>Attention:</attention> this password will also be used to encrypt the resulting file. If you forget it, you won't be able to restore your accounts.",
+    "passwordVerifyImportantNote": "<attention>Attention:</attention> this password will also be used to encrypt the resulting file. If you forget it, you will not be able to restore your accounts.",
     "verifyBtn": "Verify"
   },
   "forgotPassword": {
     "attention": "Attention!",
-    "attentionMessage": "To reset the password, you need to delete all accounts from Norsu, set a new password, import each of your account again from the Seed phrase.",
-    "warningMessage": "If you have not saved the Seed phrase or Private key, then you will not be able to recover access to your account.",
+    "attentionMessage": "To reset the password, you need to delete all accounts from Norsu, set a new password, and import each of your accounts again using the seed phrases.",
+    "warningMessage": "If you have not saved the seed phrase or private key, then you will not be able to recover access to your account.",
     "continueMessage": "To continue, type this into the field below",
     "phrase": "DELETE ALL ACCOUNTS",
-    "phraseError": "The phrase is entered incorrectly",
+    "phraseError": "The phrase is incorrect",
     "resetConfirm": "Delete all",
     "resetCancel": "Cancel"
   },
   "featureUpdateInfo": {
     "intro": "Norsu cares about safety of your funds and would like to remind you that losing the seed phrase means losing access to the account permanently.",
-    "recommendation": "So we highly recommend to create a backup file with seed phrases of all your accounts.",
-    "keystoreInfo": "Keystore file is a secure place where you can store seed phrases encrypted with your password.",
+    "recommendation": "We highly recommend you create a secure backup with the seed phrases of all your accounts.",
+    "keystoreInfo": "A Keystore file is a secure place where you can store seed phrases encrypted with your password.",
     "keystoreImport": "You can later import accounts from this file back into Norsu.",
     "backupBtn": "Back up to a keystore file",
     "cancelBtn": "I'll do it later"
@@ -249,7 +249,7 @@
     "browse": "Browse...",
     "chooseAccountsTitle": "Choose accounts",
     "chooseAccountsDesc": "Select which accounts you want to import",
-    "chooseAccountsExistingAccountNote": "Already exists in Keeper as {{existingName}}",
+    "chooseAccountsExistingAccountNote": "Already exists in Norsu as {{existingName}}",
     "chooseAccountsImportBtn": "Import {{count}} account",
     "chooseAccountsImportBtn_plural": "Import {{count}} accounts",
     "chooseAccountsSkipBtn": "Skip",
@@ -261,11 +261,11 @@
     "keystoreLabel": "Keystore File",
     "noFileSelected": "No file selected",
     "passwordLabel": "Password",
-    "passwordPlaceholder": "Password used to create Keystore"
+    "passwordPlaceholder": "Password for Keystore"
   },
   "importSeed": {
     "address": "Account address",
-    "existError": "Seed already exist",
+    "existError": "Seed already exists",
     "importAccount": "Import Account",
     "inputSeed": "Your seed is the 15 words you saved when creating your account",
     "newSeed": "Wallet Seed",
@@ -273,7 +273,7 @@
   },
   "info": {
     "joinUs": "Join the Tac Community",
-    "keepUp": "Norsu — is the safest way to interact with third-party web resources with Tac-integrated functionality or DApps. Using Norsu, you can sign transactions and remain safe from malicious sites."
+    "keepUp": "Norsu is the safest way to interact with third-party web resources with Tac-integrated functionality or DApps. Using Norsu, you can sign transactions and remain safe from malicious sites."
   },
   "langsSettings": {
     "confirm": "Confirm",
@@ -283,8 +283,8 @@
     "enter": "Enter",
     "password": "Password",
     "passwordError": "Wrong password",
-    "passwordForgot": "I forgot password",
-    "passwordforgot": "I forgot password"
+    "passwordForgot": "I forgot my password",
+    "passwordforgot": "I forgot my password"
   },
   "mainnet": "mainnet",
   "messageList": {
@@ -295,7 +295,7 @@
     "customNetwork": "network",
     "matcherError": "Incorrect matcher address",
     "nodeError": "Incorrect node address",
-    "nodeUrlEmpty": "URL is required",
+    "nodeUrlEmpty": "A URL is required",
     "saveAndApply": "Save and apply",
     "title": "Network"
   },
@@ -304,7 +304,7 @@
     "matcher": "Matcher address",
     "network": "Network",
     "networkPrefix": "You must specify 1 character",
-    "networkPrefixDescri[ption": "Network prefix",
+    "networkPrefixDescription": "Network prefix",
     "node": "Node address",
     "node_code": "Network Prefix",
     "node_code_hint": "You must specify 1 character",
@@ -317,18 +317,18 @@
     "confirmPassword": "Confirm password",
     "create": "Continue",
     "createPassword": "Create a password",
-    "notMatch": "Passwords does not match",
-    "passinfo": "The password you entered will be stored locally. If you change device or lose your password, you will have to repeat the process of adding accounts to Norsu. Tac does not store your passwords.",
+    "notMatch": "Passwords do not match",
+    "passinfo": "The password you entered will be stored locally. If you change device or lose your password, you will have to repeat the process of adding accounts to Norsu. We do not store your passwords.",
     "protect": "Protect Your Account",
     "smallPass": "Password is too short"
   },
   "newAccountName": {
     "accountName": "Account name",
     "continue": "Continue",
-    "errorInUse": "Name already exist",
+    "errorInUse": "Name already exists",
     "errorNameRequired": "Name is required",
     "errorRequired": "Required name",
-    "errorSeedExist": "Account already exist",
+    "errorSeedExist": "Account already exists",
     "nameInfo": "The account name will be known only to you"
   },
   "newWallet": {
@@ -383,7 +383,7 @@
       "disable": "Disallow",
       "enable": "Allow"
     },
-    "empty": "Nothing here…",
+    "empty": "Nothing here...",
     "rejectedOrigin": "Rejected",
     "title": "Permissions control"
   },
@@ -399,7 +399,7 @@
   "send": {
     "amountInputLabel": "Amount",
     "amountRequiredError": "Amount is required",
-    "attachmentInputLabel": "Attachment ({{count}}/{{max}} byte)",
+    "attachmentInputLabel": "Attachment ({{count}}/{{max}} bytes)",
     "attachmentInputLabel_plural": "Attachment ({{count}}/{{max}} bytes)",
     "attachmentMaxLengthError": "Attachment must not exceed 140 bytes",
     "assetInputLabel": "Asset",
@@ -430,7 +430,7 @@
     "time_40m": "40 min",
     "time_5m": "5 min",
     "time_idle": "Browser timeout",
-    "tooltipContent": "Protect yourself from Clicker Trojans threats",
+    "tooltipContent": "Protect yourself from Clicker Trojan threats",
     "suspiciousAssetsProtection": "Suspicious assets protection",
     "suspiciousAssetsTooltip": "Don't show balances and transactions related to suspicious assets"
   },
@@ -452,14 +452,14 @@
     "authOriginReject": "Blocked requests",
     "authRejected": "Request has not been signed.",
     "blacklist": "Add to blacklist",
-    "changeAccount": "Do you want to change your account?",
-    "changeAccountInfo": "If you change account, we will cancel the current transaction. After selecting a new active account, repeat the operation.",
+    "changeAccount": "Do you want to switch accounts?",
+    "changeAccountInfo": "If you switch accounts, we will cancel the current transaction. After selecting a new active account, repeat the operation.",
     "close": "Close",
     "confirmButton": "Approve",
     "customConfirmed": "Confirm a request!",
     "customData": "Custom Data",
     "customDataConfirmed": "Your data has been signed!",
-    "customDataFailed": "Your data is rejected!",
+    "customDataFailed": "Your data was rejected!",
     "customDataName": "Sign Custom Data",
     "customDataSent": "Your data is confirmed!",
     "matcherConfirmed": "Sign a request to the matcher!",
@@ -471,7 +471,7 @@
     "rejected": "Your transaction is rejected!",
     "requestRejected": "Request has not been signed",
     "signAccessHost": "wants to access your Tac Address",
-    "signAccessInfo": "The application will have access to your Tac address but will not expose your SEED or private key. Never enter your secret phrase (SEED) on any website you are redirected to.",
+    "signAccessInfo": "The application will have access to your Tac address but will not have access to your seed or private key. Never enter your seed phrase on any website you are redirected to.",
     "signAccessTac": "Sign in with Tac",
     "signButton": "Sign",
     "someError": "Something went wrong",
@@ -482,7 +482,7 @@
       "lease": "Your approved transaction",
       "transfer": "You have approved a Send transaction for"
     },
-    "transactionConfirmAlias": "You have approved Alias creation.",
+    "transactionConfirmAlias": "You have approved an Alias creation.",
     "transactionConfirmCancelLeasing": "You have approved a Cancel Lease transaction",
     "transactionConfirmCancelOrder": "You have approved a Cancel Order transaction",
     "transactionConfirmCreateOrder": "You have approved a Create Order transaction",
@@ -505,7 +505,7 @@
     "transactionSendTransfer": "You have sent transfer",
     "understand": "I understand",
     "viewTransaction": "View transaction",
-    "tacAuthConfirmed": "Sign a tac auth request!"
+    "tacAuthConfirmed": "Sign a Tac auth request!"
   },
   "swap": {
     "closeBtnText": "Close",
@@ -517,7 +517,7 @@
     "priceImpactTooltip": "The difference between the exchanger price and estimated price due to trade size.",
     "failMessage": "Swap did not succeed, please try again",
     "fee": "Fee",
-    "feeTooltip": "SwopFi fee ({{commission}}%) + Keeper fee ({{keeperCommission}}%)",
+    "feeTooltip": "SwopFi fee ({{commission}}%) + Norsu fee ({{keeperCommission}}%)",
     "insufficientFundsError": "Insufficient funds",
     "priceLabel": "Price",
     "statusFailed": "Swap failed",
@@ -591,7 +591,7 @@
     "permission": {
       "details": "Permission details"
     },
-    "permissionsWarning": "The application will have access to your Tac address but will not expose your SEED or private key. Never enter your secret phrase (SEED) on any website you are redirected to.",
+    "permissionsWarning": "The application will have access to your Tac address but will not have access to your seed phrase or private key. Never enter your seed phrase on any website you are redirected to.",
     "price": "Price",
     "publicKey": "Public Key",
     "recipient": "Recipient",
@@ -634,7 +634,7 @@
     "tacAuthTimeStamp": "Time Stamp"
   },
   "ui": {
-    "logoTitle": "Keep your Tac keys safe online"
+    "logoTitle": "Keep your Tac keys safe while online"
   },
   "ur": {
     "activeNow": "Active",
@@ -646,7 +646,7 @@
   },
   "welcome": {
     "getStarted": "Get Started",
-    "info": "Norsu — is the safest way to interact with third-party web resources with Tac-integrated functionality or DApps.",
+    "info": "Norsu is the safest way to interact with third-party web resources with Tac-integrated functionality or DApps.",
     "info2": "Using Norsu, you can sign transactions and remain safe from malicious sites."
   }
 }

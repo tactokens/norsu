@@ -81,7 +81,7 @@ Norsu.
 2. MODIFICATION OF TERMS OF USE
 The most current version of the Terms of Use will be provided at:
 
-https://raw.githubusercontent.com/tactokens/norsu/main/terms.txt
+https://raw.githubusercontent.com/tactokens/norsu/main/json/terms.txt
 
 Any updates of these Terms will be effective no sooner than the day they are publicly posted.
 If you do not want to agree to any changes made to the Terms of Use, you should stop using

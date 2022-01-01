@@ -6,7 +6,7 @@ the Service) Terms of Use. This document describes how we collect, use, share, a
 the data we receive from you because you are using our web browser extension “Norsu”.
 Any changes will be made available at the following location:
 
-https://raw.githubusercontent.com/tactokens/norsu/main/privacy.txt
+https://raw.githubusercontent.com/tactokens/norsu/main/json/privacy.txt
 
 Chainfrog Oy (Y-tunnus: 2788082-9) understands that your privacy is important and that you
 care about how your personal data is used.

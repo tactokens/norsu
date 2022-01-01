@@ -4,7 +4,7 @@ A web extension blockchain wallet for the TAC platform.
 
 ## Build instructions
 
-Run `./build.sh`, which installs the required node modules, does an in-place edit on one of the npm packages to change the chain Id from 1 to 15, and then builds the distribution packages. These can be found in the `dist` folder.
+To build Norsu you need to go to the `norsu-build` repo. This repo stores the latest distribution for Norsu in the `dist` folder.
 
 ## Installing the extension
 

@@ -2,21 +2,23 @@
 
 A web extension blockchain wallet for the TAC platform.
 
-## Build instructions
-
-To build Norsu you need to go to the `norsu-build` repo. This repo stores the latest distribution for Norsu in the `dist` folder.
-
 ## Installing the extension
 
-Until Google approves the extension, it has to be installed manually.
+These instructions are for Chrome or Brave. Until Google approves the extension, it has to be installed manually. Perhaps someone would like to try FireFox or Edge, and provide instructions for installing on those.
 
-Open Chrome and enter `chrome://extensions` in the address bar (for Brave, change that to `brave://extensions`).
+1. Clone the repo with `git clone https://github.com/tactokens/norsu.git`
 
-Toggle the "Developer mode" switch in the top-right corner to on.
+2. Open Chrome (or Brave) and enter `chrome://extensions` (or `brave://extensions`) in the address bar.
 
-Click on "Load unpacked" and select the `./dist/chrome` folder.
+3. Toggle the "Developer mode" switch in the top-right corner to on.
+
+4. Click on "Load unpacked" and select the `./dist/chrome` folder.
 
 The extension should now be loaded into your browser.
+
+## Build instructions
+
+To build Norsu you need to go to the `norsu-build` repo. This repo only stores the latest released distribution for Norsu in the `dist` folder.
 
 ## Web3 instructions
 
